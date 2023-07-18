@@ -5,6 +5,64 @@ description: About
 bodyClass: page-about
 ---
 
+My name is Ayush Tiwari.
+
+I live in Paris, France.
+
+I speak English(native), French(professional), and Hindi.
+
+## Skills and Tools
+
+- **Programming Languages:** Python, JavaScript, HTML, CSS
+- **Web Development:** API Development (Zope, Django), FastAPI, React, NextJS
+- **Cloud and Infrastructure:** GCP, Kubernetes
+- **Data Science and Machine Learning:** Pyodide, Jupyter, NumPy, SciPy, spaCy (NLP)
+- **Other Technologies:** Unix (Bash), Git, SQL, PostgreSQL, Buildout, Metabase (BI), ERP5, GTM, FB Marketing API, Stripe API
+- **Design and Development:** Continuous Integration, Unit Testing, Contribution to Open Source projects
+
+## Education
+
+**Indian Institute of Technology, Roorkee**
+- B.Tech, Mechanical Engineering
+- Jun 2012 - Jun 2016
+
+## Professional Experiences
+
+### Senior Backend Engineer, Prose, Paris/New York
+- Feb 2021 - Ongoing
+- Technologies: Django, PSQL, Facebook CAPI, GTM, React JS, GCP
+- Accomplishments:
+  - Implemented the Facebook Conversion API, leading to a 100% improvement in ad attribution and significant savings in ad spending.
+  - Enhanced the retention architecture to support multiple subscriptions per user, resulting in a significant impact on revenue.
+  - Re-implemented the payment system with Stripe, reducing churn for failed payments based on Domain-Driven Design (DDD) principles.
+  - Started a technical blog to attract engineering talents, resulting in a team expansion from 3 to 9 members.
+
+### Full Stack Developer, BureauxLocaux, Paris
+- Apr 2019 - Jan 2021
+- Technologies: Django, React JS, Heroku, PSQL, Stripe API
+- Accomplishments:
+  - Developed and regularly shipped business-guided functionalities with extensive test coverage using Django and React.
+  - Led the migration of Stripe Payment to comply with new SCA regulations, making BureauxLocaux the first company to do so in the EU.
+  - Integrated Business Intelligence software (Metabase) for data analysis, significantly reducing the time required for analysis.
+
+### Backend Engineer (Research & Development), Nexedi SA, Lille, France
+- Dec 2016 - Mar 2019
+- Accomplishments:
+  - Managed and controlled versions on ERP5, an object-based system, eliminating the need for git.
+  - Developed a Diff Tool application using Python and RenderJS to compare differences between ERP5 objects.
+
+### Developer (Internship), Nexedi SA, Lille, France
+- Jun 2016 - Nov 2016
+- Technologies: Buildout, Python (Zope, ERP5), Jupyter
+- Accomplishments:
+  - Migrated the Catalog in ERP5, optimizing the performance of requests by developing an API for catalog indexing.
+  - Created a Jupyter Kernel to interact with ERP5 and Wendelin for Big Data.
+
+## Projects
+
+[Include a brief description of notable projects or highlight key contributions]
+[GitHub](https://github.com/tiwariayush)!
+
 
 # Our approach
 ## 1. Development
