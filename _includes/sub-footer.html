@@ -6,9 +6,14 @@
           {% if site.data.social %}
             {% include social.html %}
           {% endif %}
-          {% if site.data.seo.copyright_text %}
-          <div class="copyright">{{ site.data.seo.copyright_text }}</div>
-          {% endif %}
+          <div class="row-2">
+            {% if site.data.seo.copyright_text %}
+              <div class="copyright">{{ site.data.seo.copyright_text }}</div>
+            {% endif %}
+            {% if site.data.seo.company_info %}
+              <div class="copyright">{{ site.data.seo.company_info }}</div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "High Technical Standards",
+    "description": "We set uncompromising expectations of security, performance, and maintainability.",
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
       "width": 80,
@@ -9,8 +9,8 @@
     }
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Pragmatic Solutions",
+    "description": "Building robust systems, with proper data models, separation of concerns, and well-defined APIs.",
     "image": {
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
@@ -18,8 +18,8 @@
     }
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Focus on human resources",
+    "description": "Improving skills of everyone involved, both individually and as a team, thus helping in the long-term success of your company",
     "image": {
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,
