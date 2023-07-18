@@ -1,13 +1,13 @@
 ---
-title: Jekyll Serif Theme
+title: Cartesian Trees
 layout: home
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+description: We boost your technical team's ability to meet present and future challenges..
 intro_image: "images/illustrations/pointing.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Serif - A Jekyll Business Theme.
+# Cartesian Trees
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+We boost your technical team's ability to meet present and future challenges.

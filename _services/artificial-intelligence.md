@@ -1,13 +1,10 @@
 ---
-title: "Mergers"
-date: 2019-02-28T15:15:34+10:00
-weight: 3
+title: "Artificial Intelligence"
+date: 2023-11-18T12:33:46+10:00
+weight: 0.3
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
-
+Our company specializes in democratizing data science, artificial intelligence (AI), and real-time machine learning (LLM), driving rapid progress. Despite the challenges associated with data projects, we offer valuable expertise and insights. Partnering with us brings significant business benefits. We excel in identifying realistic use cases and guide you from idea to return on investment.  With our extensive experience in traditional business intelligence, AI, and LLM algorithms, we provide valuable insights and uncover opportunities for your organization.
 ![Accounting Services](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
 
 # Objectives
