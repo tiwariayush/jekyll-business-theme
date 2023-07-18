@@ -1,4 +1,5 @@
 baseurl: '/'
+siteUrl: "https://cartesiantrees.com"
 permalink: pretty
 title: 'Cartesian Trees'
 
