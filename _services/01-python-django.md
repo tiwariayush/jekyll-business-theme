@@ -5,7 +5,7 @@ weight: 1
 ---
 
 Our company specializes in API integration using Python, Django and FastAPI offering a wide range of features and capabilities:
-![Accounting Services](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
+![Python and Django](/images/clement-helardot-95YRwf6CNw8-unsplash.jpg)
 
 # Objectives
 

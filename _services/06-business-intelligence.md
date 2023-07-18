@@ -4,7 +4,7 @@ date: 2018-11-18T12:33:46+10:00
 weight: 6
 ---
 
-# Business Intelligence with Metabase
+# Business Intelligence with Metabase.
 
 As a consulting company specializing in Business Intelligence with Metabase, our objectives are:
 
