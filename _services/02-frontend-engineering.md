@@ -56,10 +56,10 @@ We integrate third-party services and APIs seamlessly into React and Next.js app
 
 To get started with React and Next.js frontend development services, follow these steps:
 
-1. Contact our sales team to discuss your project requirements and objectives.
-2. Our team will schedule a consultation to understand your specific needs and provide a customized proposal.
+1. [Contact us](https://cartesiantrees.com/contact) to discuss your project requirements and objectives.
+2. We will schedule a consultation to understand your specific needs and provide a customized proposal.
 3. Upon agreement, we will commence the development process, ensuring regular communication and progress updates.
 4. We deliver the completed project, conduct thorough testing, and assist with deployment and post-launch support.
 
-For any inquiries or questions, please reach out to us using the contact provided in the header tab.
+For any inquiries or questions, please reach out to us [here](https://cartesiantrees.com/contact/)
 
