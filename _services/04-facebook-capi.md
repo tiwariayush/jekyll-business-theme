@@ -4,16 +4,15 @@ date: 2018-11-18T12:33:46+10:00
 weight: 4
 ---
 
-As a consulting company specializing in Facebook Conversion API implementation, our objectives are:
+The Facebook Conversion API (formerly known as the Server-Side API) allows businesses to send user event data directly to Facebook servers from their websites or apps. This data helps track and measure various user actions, such as purchases, sign-ups, and other valuable conversions.
+
+## Objectives
 
 1. To assist businesses in implementing the Facebook Conversion API to accurately track and measure conversions across their websites and apps.
 2. To ensure the successful integration of the Conversion API with clients' existing systems and platforms.
 3. To provide expertise and guidance in optimizing the use of the Conversion API for improved ad performance and targeting.
 4. Save money in the long run by reducing the cost of ad campaigns and improving the ROI.
 
-## Facebook Conversion API
-
-The Facebook Conversion API (formerly known as the Server-Side API) allows businesses to send user event data directly to Facebook servers from their websites or apps. This data helps track and measure various user actions, such as purchases, sign-ups, and other valuable conversions.
 
 ### Key Concepts of Facebook Conversion API
 
@@ -86,4 +85,4 @@ We analyze your ad campaigns and Conversion API data to identify opportunities f
 
 ----
 
-For any inquiries or questions, please reach out to our team using the contact information provided below.
+For any inquiries or questions, please reach out to our team using the [contact](/contact) page.

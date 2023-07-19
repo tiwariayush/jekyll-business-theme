@@ -10,7 +10,9 @@ Our company specializes in API integration using Python, Django and FastAPI offe
 # Objectives
 
 
-By leveraging the capabilities of Python, Django and/or FastAPI, we provide with these features. These features enable efficient and secure communication between systems, empowering your applications with enhanced functionality and interoperability.
+By leveraging the capabilities of Python and web framework chosen, we enable efficient and secure communication between systems, empowering your applications with enhanced functionality and interoperability.
+
+What we will deliver:
 
 
 - **Seamless API Integration:** We excel at integrating APIs into your applications, whether it's consuming external APIs or building your own API ecosystem. We ensure smooth communication and data exchange between different systems, enabling seamless integration with third-party services. 
@@ -29,14 +31,7 @@ By leveraging the capabilities of Python, Django and/or FastAPI, we provide with
 
 - **Error Handling and Logging:** We implement robust error handling and logging mechanisms to track and handle errors effectively. This helps in debugging and troubleshooting API issues, providing valuable insights for continuous improvement.
 
-## Objectives
-
-Our primary objectives as a Python and Django consulting company are:
-
-1. To provide high-quality software development services to our clients.
-2. To assist clients in leveraging the power of Python and Django frameworks for their projects.
-3. To deliver scalable and robust solutions that meet the specific needs of our clients.
-
+## Steps
 
 Here's an example of how generally we proceed with the frontend and backend work to create a web app:
 
@@ -63,3 +58,6 @@ Here's an example of how generally we proceed with the frontend and backend work
 | |                    | Analyze user feedback and incorporate improvements                  | Collaborate on future feature enhancements and system updates      |
 
 ***Note:** The above table is a general representation of the workflow between frontend and backend teams during the development of a web app. The specific tasks and stages may vary based on project requirements and team preferences.*
+
+
+[Contact Us](/contact) for more detailed information about our services and how we can help you with your project.

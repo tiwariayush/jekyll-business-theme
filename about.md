@@ -10,11 +10,11 @@ We work together with the client to understand their requirements and build scal
 
 ### 1. Development
 
-We specialize in developing custom web applications. We work closely with clients to understand their requirements and build scalable and secure solutions tailored to their needs.
+We specialize in developing custom web applications. We work closely with clients to understand their requirements and develop together. We follow an agile approach to ensure the project is delivered on time and within budget.
 
 ### 2. Code Review and Optimization
 
-We can review your existing, identify potential issues, and suggest improvements to optimize performance, enhance security, and ensure code quality.
+We can review your existing codebase, identify potential issues, and suggest improvements to optimize performance, enhance security, and ensure code quality.
 
 ### 3. Consulting and Technical Guidance
 
@@ -49,12 +49,12 @@ I am a regular open source contributor, contributing to **Stripe Payment API, Fa
 ## Education
 
 [**Indian Institute of Technology, Roorkee**](https://www.lesechos.fr/weekend/business-story/inde-dans-les-coulisses-de-ces-ecoles-qui-faconnent-lelite-de-la-silicon-valley-1397124)
-- B.Tech, Mechanical Engineering
-- Jun 2012 - Jun 2016
+
+B.Tech, Jun 2012 - Jun 2016
 
 ## Professional Experiences
 
-I have worked in various American, French and open source companies, working on a wide range of projects, from developing a Diff Tool application to compare differences between ERP5 objects to implementing the Facebook Conversion API, leading to a 100% improvement in ad attribution and significant savings in ad spending.
+I have worked in various American, French and open source companies and clients, working on a wide range of projects, from developing a Diff Tool application to compare differences between ERP5 objects to implementing the Facebook Conversion API, leading to a 100% improvement in ad attribution and significant savings in ad spending.
 ### Senior Backend Engineer, Prose, Paris/New York
 - Technologies: Django, PSQL, Facebook CAPI, GTM, React JS, GCP
 - Accomplishments:

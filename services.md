@@ -7,4 +7,4 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Technical services which grows with your business and team
+# Technical services which grow with your business and team

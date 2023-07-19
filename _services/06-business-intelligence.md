@@ -4,17 +4,13 @@ date: 2018-11-18T12:33:46+10:00
 weight: 6
 ---
 
-# Business Intelligence with Metabase.
+Metabase is an open-source business intelligence tool that simplifies data analytics and visualization. It allows users to explore, query, and create interactive dashboards from various data sources, providing insights to drive informed decision-making.
 
-As a consulting company specializing in Business Intelligence with Metabase, our objectives are:
+# Business Intelligence with Metabase objectives:
 
 1. To help businesses leverage the power of data analytics and visualization using Metabase.
 2. To enable organizations to make data-driven decisions and gain valuable insights from their data.
 3. To provide expertise in designing, implementing, and optimizing Metabase solutions tailored to clients' specific needs.
-
-## Metabase
-
-Metabase is an open-source business intelligence tool that simplifies data analytics and visualization. It allows users to explore, query, and create interactive dashboards from various data sources, providing insights to drive informed decision-making.
 
 
 ### 1. Metabase Implementation
