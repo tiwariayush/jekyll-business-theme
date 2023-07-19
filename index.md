@@ -1,5 +1,5 @@
 ---
-title: Cartesian Trees
+title: Cartesian Trees©
 layout: home
 description: We enhance your technical team's capacity to overcome current and upcoming obstacles.
 intro_image: "images/illustrations/pixeltrue-teaching-1.svg"
@@ -9,4 +9,6 @@ show_call_box: true
 ---
 
 # Cartesian Trees Tech Consulting
+*Based out of*&nbsp; **Paris, France**
+
 We enhance your technical team's capacity to overcome current and upcoming obstacles.
