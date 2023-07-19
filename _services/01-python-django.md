@@ -4,8 +4,8 @@ date: 2018-11-18T12:33:46+10:00
 weight: 1
 ---
 
-Our company specializes in API integration using Python, Django and FastAPI offering a wide range of features and capabilities:
-![Python and Django](/images/clement-helardot-95YRwf6CNw8-unsplash.jpg)
+Our company specializes in API integration using Python, Django and FastAPI.
+![Python and Django](/images/pixeltrue-web-development-1.svg)
 
 # Objectives
 
