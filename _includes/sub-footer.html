@@ -3,24 +3,49 @@
     <div class="row">
       <div class="col-12">
         <div class="sub-footer-inner">
+          <div class="row-2">
           {% if site.data.social %}
             {% include social.html %}
           {% endif %}
+                        {% if site.data.seo.company_name %}
+            <div class="copyright"><strong>{{ site.data.seo.company_name }}</strong></div>
+            {% endif %}
+                                                {% if site.data.seo.company_address %}
+            <div class="copyright"><small>{{ site.data.seo.company_address }}</small></div>
+            {% endif %}
+                                    {% if site.data.seo.company_contact %}
+            <div class="copyright"><small>{{ site.data.seo.company_contact }}</small></div>
+            {% endif %}
+            <p/>
+                        {% if site.data.seo.sasu_info %}
+            <div class="copyright"><small>{{ site.data.seo.sasu_info }}</small></div>
+            {% endif %}
+                        {% if site.data.seo.rcs_info %}
+            <div class="copyright"><small>{{ site.data.seo.rcs_info }}</small></div>
+            {% endif %}
+                        {% if site.data.seo.tva_info %}
+            <div class="copyright"><small>{{ site.data.seo.tva_info }}</small></div>
+            {% endif %}
+          </div>
           <div class="row-2">
+            <p/>
+            <p/>
                         {% if site.data.seo.legal_mentions %}
             <div class="copyright"><strong>{{ site.data.seo.legal_mentions }}</strong></div>
             {% endif %}
-            {% if site.data.seo.copyright_text %}
-              <div class="copyright">{{ site.data.seo.copyright_text }}</div>
+            <p/>
+                        {% if site.data.seo.director_info %}
+            <div class="copyright"><small>{{ site.data.seo.director_info }}</small></div>
             {% endif %}
-            {% if site.data.seo.company_info %}
-              <div class="copyright">{{ site.data.seo.company_info }}</div>
+            {% if site.data.seo.server_info %}
+            <div class="copyright"><small>{{ site.data.seo.server_info }}</small></div>
             {% endif %}
-            {% if site.data.seo.director_info %}
-              <div class="copyright">{{ site.data.seo.director_info }}</div>
+            {% if site.data.seo.cookies_info %}
+            <div class="copyright"><small>{{ site.data.seo.cookies_info }}</small></div>
             {% endif %}
+
             {% if site.data.seo.disclaimer %}
-              <div class="copyright">{{ site.data.seo.disclaimer }}</div>
+            <div class="copyright"><small>{{ site.data.seo.disclaimer }}</small></div>
             {% endif %}
           </div>
         </div>
