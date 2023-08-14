@@ -29,7 +29,7 @@ We conduct training sessions and workshops to enhance your team's knowledge and 
 ## Who am I ?
 ![Ayush Tiwari](/images/28933.jpeg)
 
-My name is **Ayush Tiwari**.
+My name is **Ayush Tiwari** and I am the founder of **Cartesian Trees Tech Consulting**.
 
 I live in Paris, France.
 
@@ -37,14 +37,8 @@ I speak English(native), French(professional), and Hindi.
 
 I am a regular open source contributor, contributing to **Stripe Payment API, Facebook CAPI, Metabase and Pyodide**.
 
-## Skills and Tools
+I have worked in various American and French companies and clients, from open source to proprietary software, from developing version control systems to implementing the Facebook Conversion API, from e2e tested web apps to developing payment APIs.
 
-- **Programming Languages:** Python, JavaScript, HTML, CSS
-- **Web Development:** API Development (Zope, Django), FastAPI, React, NextJS
-- **Cloud and Infrastructure:** GCP, Kubernetes
-- **Data Science and Machine Learning:** Pyodide, Jupyter, NumPy, SciPy, spaCy (NLP)
-- **Other Technologies:** Unix (Bash), Git, SQL, PostgreSQL, Buildout, Metabase (BI), ERP5, GTM, FB Marketing API, Stripe API
-- **Design and Development:** Continuous Integration, Unit Testing, Contribution to Open Source projects
 
 ## Education
 
@@ -52,26 +46,12 @@ I am a regular open source contributor, contributing to **Stripe Payment API, Fa
 
 B.Tech, Jun 2012 - Jun 2016
 
-## Professional Experiences
 
-I have worked in various American, French and open source companies and clients, working on a wide range of projects, from developing a Diff Tool application to compare differences between ERP5 objects to implementing the Facebook Conversion API, leading to a 100% improvement in ad attribution and significant savings in ad spending.
-### Senior Backend Engineer, Prose, Paris/New York
-- Technologies: Django, PSQL, Facebook CAPI, GTM, React JS, GCP
-- Accomplishments:
-  - Implemented the Facebook Conversion API, leading to a 100% improvement in ad attribution and significant savings in ad spending.
-  - Enhanced the retention architecture to support multiple subscriptions per user, resulting in a significant impact on revenue.
-  - Re-implemented the payment system with Stripe, reducing churn for failed payments based on Domain-Driven Design (DDD) principles.
-  - Started a technical blog to attract engineering talents, resulting in a team expansion from 3 to 9 members.
+## Skills and expertise
 
-### Full Stack Developer, BureauxLocaux, Paris
-- Technologies: Django, React JS, Heroku, PSQL, Stripe API
-- Accomplishments:
-  - Developed and regularly shipped business-guided functionalities with extensive test coverage using Django and React.
-  - Led the migration of Stripe Payment to comply with new SCA regulations, making BureauxLocaux the first company to do so in the EU.
-  - Integrated Business Intelligence software (Metabase) for data analysis, significantly reducing the time required for analysis.
-
-### Backend Engineer (Research & Development), Nexedi SA, Lille, France
-- Dec 2016 - Mar 2019
-- Accomplishments:
-  - Managed and controlled versions on ERP5, an object-based system, eliminating the need for git.
-  - Developed a Diff Tool application using Python and RenderJS to compare differences between ERP5 objects.
+- **Programming Languages:** Python, JavaScript, HTML, CSS
+- **Web Development:** API Development (Zope, Django), FastAPI, React, NextJS
+- **Cloud and Infrastructure:** GCP, Kubernetes
+- **Data Science and Machine Learning:** Pyodide, Jupyter, NumPy, SciPy, spaCy (NLP)
+- **Other Technologies:** Unix (Bash), Git, SQL, PostgreSQL, Buildout, Metabase (BI), ERP5, GTM, FB Marketing API, Stripe API
+- **Design and Development:** Continuous Integration, Unit Testing, Contribution to Open Source projects
