@@ -1,9 +1,9 @@
 baseurl: '/'
 siteUrl: "https://cartesiantrees.com"
 permalink: pretty
-title: 'Cartesian Trees©'
+title: 'Cartesian Trees'
 
-logo:
+logo_info:
   mobile: "images/logo/logo-main.png"
   mobile_height: "32px"
   mobile_width: "32px"
@@ -11,7 +11,9 @@ logo:
   desktop_height: "60px"
   desktop_width: "300px"
 
-home: 
+logo: "images/logo/logo-main.png"
+
+home:
   limit_services: 6
 
 collections:
