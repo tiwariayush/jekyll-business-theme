@@ -8,7 +8,7 @@ intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 
-# Cartesian Trees Tech Consulting
+# Cartesian Trees Tech
 *Based out of*&nbsp; **Paris, France**
 
 We enhance your technical team's capacity to overcome current and upcoming obstacles.
