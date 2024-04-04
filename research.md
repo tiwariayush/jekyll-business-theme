@@ -5,8 +5,6 @@ description: Research
 bodyClass: page-research
 ---
 
-## Research
-
 # Bayesian Theorem in Postgres
 
 For a project focused on integrating the Bayesian Theorem into Postgres for large action models, conducting simulations and choosing the right algorithms are crucial steps. These should be designed to test the system's performance, accuracy, scalability, and efficiency. Below, we outline potential simulations and algorithms that could be particularly useful for our project.
