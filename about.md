@@ -26,18 +26,13 @@ We conduct training sessions and workshops to enhance your team's knowledge and 
 
 
 
-## Who am I ?
-![Ayush Tiwari](/images/28933.jpeg)
+## Who are we ?
 
-My name is **Ayush Tiwari** and I am the founder of **Cartesian Trees Tech Consulting**.
+Founder
+-------
+**Ayush Tiwari**, living in Paris, France.
 
-I live in Paris, France.
-
-I speak English(native), French(professional), and Hindi.
-
-I am a regular open source contributor, contributing to **Stripe Payment API, Facebook CAPI, Metabase and Pyodide**.
-
-I have worked in various American and French companies and clients, from open source to proprietary software, from developing version control systems to implementing the Facebook Conversion API, from e2e tested web apps to developing payment APIs.
+He is a regular open source contributor, contributing to **Stripe Payment API, Facebook CAPI, Metabase and Pyodide**. Ayush has worked with various American and French companies and clients, from open source to proprietary software, from developing version control systems to implementing the Facebook Conversion API, from e2e tested web apps to developing payment APIs.
 
 
 ## Education
