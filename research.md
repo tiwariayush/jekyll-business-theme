@@ -1,223 +1,159 @@
 ---
-title:
+title: Our Research
 layout: page
 description: Research
 bodyClass: page-research
 ---
 
-# Bayesian Theorem in Postgres
+# Bringing Bayesian Intelligence to PostgreSQL
 
-For a project focused on integrating the Bayesian Theorem into Postgres for large action models, conducting simulations and choosing the right algorithms are crucial steps. These should be designed to test the system's performance, accuracy, scalability, and efficiency. Below, we outline potential simulations and algorithms that could be particularly useful for our project.
+We're a **Jeune Entreprise Innovante (JEI)** based in France, and this is the research that got us there.
 
-### Simulations to be Conducted
+For the past couple of years, we've been working on a question that sounds simple but goes surprisingly deep: *what if your database could reason under uncertainty?* Databases are excellent at storing and retrieving facts, but real-world decisions rarely happen with complete information. That's where Bayesian inference comes in—and we've been building it directly into PostgreSQL.
 
-1. **Performance Benchmarking**: Simulate various scenarios to benchmark the performance of Bayesian queries against traditional statistical methods within Postgres. Use datasets of varying sizes and complexities to assess how the system handles load and speed.
-   
-2. **Accuracy Testing**: Implement simulations that compare the accuracy of Bayesian inference results with existing models or known outcomes. This could involve generating synthetic datasets with pre-defined properties or using real-world datasets where outcomes are already known.
+Our work is open source. You can explore everything we've built at [github.com/cartesiantrees/postgres-bayes](https://github.com/cartesiantrees/postgres-bayes).
 
-3. **Scalability Assessment**: Test the system's scalability by gradually increasing the volume of data and the rate of incoming data streams. Monitor how the integration of Bayesian methods affects the system's ability to process and analyze data efficiently.
+---
 
-4. **Resource Utilization**: Evaluate the computational resource utilization (CPU, memory) of running Bayesian analyses in Postgres. Compare this with the resource usage of performing similar analyses outside of the database to highlight any improvements or optimizations achieved.
+## Why We Started This
 
-5. **Real-Time Data Streaming**: Simulate real-time data streaming to evaluate the system's capability to update Bayesian inferences dynamically as new data arrives. This will test the responsiveness and adaptability of the system to real-world use cases.
+Anyone who's deployed machine learning in production knows the frustration. You train a model in Python, export it, deploy it somewhere else, and then spend half your time shuttling data back and forth between your database and your inference engine. It's clunky, it's slow, and when something breaks at 2am, good luck figuring out which piece failed.
 
-### Useful Algorithms
+We kept asking ourselves: why can't the database just do the inference? Why should probabilistic reasoning live outside the place where your data actually lives?
 
-For integrating Bayesian methods into Postgres, selecting algorithms that are efficient, scalable, and compatible with relational database management systems is essential. Here are some algorithms and approaches that could be useful:
+That question led us down a rabbit hole of research—adapting Bayesian algorithms for relational database architectures, figuring out how to make MCMC sampling work within PostgreSQL's execution model, and testing whether any of this could actually perform well enough to be useful.
 
-1. **Markov Chain Monte Carlo (MCMC)**: A class of algorithms useful for sampling from probability distributions where direct sampling is challenging. MCMC, particularly the Metropolis-Hastings algorithm, can be adapted for Bayesian inference, allowing for the approximation of posterior distributions.
+Turns out, it can. And that work earned us JEI status from the French government—recognition that what we're doing qualifies as genuine R&D innovation.
 
-2. **Gibbs Sampling**: A special case of MCMC that is simpler and often more efficient, especially when dealing with complex multi-parameter models. It's useful for updating posterior probabilities as new data becomes available.
+---
 
-3. **Variational Inference (VI)**: An alternative to MCMC, VI is faster and more scalable for large datasets. It approximates the posterior distribution with a simpler distribution, optimizing the parameters of this simpler distribution to be as close as possible to the posterior.
+## What We've Built
 
-4. **Bayesian Hierarchical Models**: These models are useful for managing complex data structures and dependencies within the data. They can be particularly effective in scenarios where data is grouped or hierarchical in nature.
+Our [postgres-bayes repository](https://github.com/cartesiantrees/postgres-bayes) contains the algorithms, simulations, and tooling we've developed. Here's what's in there:
 
-5. **Approximate Bayesian Computation (ABC)**: For situations where the likelihood function is difficult or impossible to compute, ABC can be used to approximate the posterior distribution without the direct computation of likelihoods. This is particularly useful for complex models or large-scale applications.
+### Core Algorithms
 
-### Implementation Considerations
+We've implemented several foundational Bayesian methods, each adapted for database integration:
 
-- **Custom Stored Procedures**: Implementing these algorithms within Postgres may require the development of custom stored procedures or functions that can execute the Bayesian calculations efficiently.
-
-- **Parallel Processing**: Leverage Postgres's parallel query processing capabilities to improve the performance of Bayesian algorithms, especially for large datasets.
-
-- **Optimization and Indexing**: Use optimization techniques and appropriate indexing to speed up query execution times, particularly for complex Bayesian queries that may involve multiple joins or subqueries.
-
-- **External Libraries**: Consider integrating external mathematical libraries or frameworks that specialize in Bayesian computation if direct implementation within Postgres is not feasible or efficient.
-
-
-### Preliminaries
-
-1. **Install Necessary Libraries**: Ensure you have `psycopg2` and `pymc3` installed. You can install these using pip:
-
-```bash
-pip install psycopg2-binary pymc3
-```
-
-2. **Database Setup**: This example assumes you have a Postgres database set up with a table containing our data. For simplicity, let's assume a table named `action_data` with columns `id`, `feature1`, `feature2`, and `outcome`.
-
-### Python Script for Simulation
+**Markov Chain Monte Carlo (MCMC)** — Our implementation uses the Metropolis-Hastings algorithm to sample from posterior distributions. We built this to estimate parameters of Gaussian distributions from observed data, which forms the backbone of many practical applications.
 
 ```python
-import numpy as np
-import pandas as pd
-import psycopg2
-import pymc3 as pm
-from scipy.stats import norm
+def metropolis_hastings(data, prior_mu, prior_sigma, proposal_width, n_iterations):
+    mu_current = np.random.rand()
+    posterior_samples = [mu_current]
 
-# Establish connection to the Postgres database
-conn = psycopg2.connect(
-    dbname='our_dbname', user='our_user',
-    password='our_password', host='our_host'
-)
-
-# Function to load data from Postgres
-def load_data(query, connection):
-    return pd.read_sql_query(query, connection)
-
-# Bayesian Analysis using PyMC3
-def bayesian_analysis(data):
-    with pm.Model() as model:
-        # Priors for unknown model parameters
-        alpha = pm.Normal('alpha', mu=0, sigma=10)
-        beta = pm.Normal('beta', mu=0, sigma=10, shape=2)
-        sigma = pm.HalfNormal('sigma', sigma=1)
+    for i in range(n_iterations):
+        # Propose a new value from a normal distribution
+        mu_proposal = np.random.normal(mu_current, proposal_width)
         
-        # Expected value of outcome
-        mu = alpha + beta[0] * data['feature1'] + beta[1] * data['feature2']
+        # Calculate likelihood and prior for current and proposed
+        # Accept or reject based on the ratio
+        p_accept = np.exp((likelihood_proposal + prior_proposal) - 
+                          (likelihood_current + prior_current))
         
-        # Likelihood (sampling distribution) of observations
-        Y_obs = pm.Normal('Y_obs', mu=mu, sigma=sigma, observed=data['outcome'])
-        
-        # Draw posterior samples
-        trace = pm.sample(1000)
-        
-    return trace
+        if np.random.rand() < p_accept:
+            mu_current = mu_proposal
+        posterior_samples.append(mu_current)
 
-# Function to perform simulations and measure performance
-def perform_simulation(data):
-    # Perform Bayesian Analysis
-    trace = bayesian_analysis(data)
-    
-    # Extract the trace for analysis
-    alpha_samples = trace['alpha']
-    beta_samples = trace['beta']
-    
-    print("Simulation Complete. Posterior samples extracted for analysis.")
-    
-    # Further analysis can be done with alpha_samples and beta_samples
-
-# Main function to run the simulations
-def main():
-    query = 'SELECT * FROM action_data'
-    data = load_data(query, conn)
-    
-    # Assuming data['feature1'], data['feature2'], and data['outcome'] are correctly loaded
-    perform_simulation(data)
-
-if __name__ == "__main__":
-    main()
+    return np.array(posterior_samples)
 ```
 
-### Important Notes:
+**Gibbs Sampling** — For joint distributions with correlated variables, we implemented Gibbs sampling. This works particularly well when you have bivariate or multivariate data where variables depend on each other—think customer behavior influenced by multiple factors simultaneously.
 
-- **Database Connection**: Replace `'our_dbname'`, `'our_user'`, `'our_password'`, and `'our_host'` with our actual Postgres database credentials.
-- **Data Loading**: The `load_data` function executes a SQL query to load data into a Pandas DataFrame. Adjust the query as needed for our dataset.
-- **Bayesian Model**: The `bayesian_analysis` function defines a simple Bayesian linear regression model with PyMC3. This is just a starting point. Depending on our data and hypotheses, you might need to adjust the model significantly.
-- **Performance Metrics**: This example focuses on setting up and executing the Bayesian model. To fully assess performance and accuracy as part of our simulations, you would need to extend this script to include metrics like execution time, model accuracy (e.g., RMSE for predictions), and resource utilization.
+**Variational Inference (ADVI)** — When you need speed over exactness, variational methods approximate the posterior with a simpler distribution. We use PyMC3's automatic differentiation variational inference for cases where MCMC would be too slow.
 
-This script serves as a foundational framework for conducting Bayesian analysis with data stored in a Postgres database. Customizations based on the specifics of our dataset, analysis goals, and performance metrics are essential to fully leverage this approach.
+**Approximate Bayesian Computation** — For the tricky cases where you can't even write down a likelihood function, we've implemented ABC with rejection sampling. It's slower, but it opens doors to models that would otherwise be impossible.
 
-Given the complexity and the breadth of the simulations mentioned, it's not feasible to write detailed, fully functional code for all of them within this format, especially since each simulation might require extensive setup, data, and analysis specific to our environment and objectives. However, I can provide a conceptual framework and outline for Python scripts that you could develop further into separate files for each simulation. These examples assume you're familiar with Python, PostgreSQL, and relevant libraries for data analysis and Bayesian inference.
+### Real-World Simulations
 
-### 1. Performance Benchmarking
+Algorithms are one thing; proving they work on real problems is another. We've built simulations for several domains:
 
-**Objective**: Compare the execution time of Bayesian queries within Postgres to traditional statistical methods.
-
-**Conceptual Framework**:
-
-- Use `time` module to measure execution times.
-- Execute a Bayesian query using `psycopg2` and a traditional statistical query for comparison.
-- Calculate and log the difference in execution times.
-
-### 2. Accuracy Testing
-
-**Objective**: Compare the accuracy of Bayesian inference results with known outcomes or existing models.
-
-**Conceptual Framework**:
-
-- Use a dataset with known outcomes to perform Bayesian inference.
-- Calculate accuracy metrics (e.g., RMSE, MAE) based on the inference results.
-- Compare these metrics to those from existing models or the ground truth.
-
-### 3. Scalability Assessment
-
-**Objective**: Evaluate how the system scales with increasing data volume.
-
-**Conceptual Framework**:
-
-- Gradually increase the size of the dataset processed by the Bayesian model.
-- Measure and log system performance metrics (e.g., execution time, CPU, and memory usage) at each scale.
-- Analyze the scalability of the system based on these metrics.
-
-### 4. Resource Utilization
-
-**Objective**: Assess CPU and memory utilization during Bayesian analysis.
-
-**Conceptual Framework**:
-
-- Use system monitoring tools (e.g., `psutil` in Python) to measure CPU and memory usage before, during, and after Bayesian analysis.
-- Log these metrics to evaluate the efficiency of resource utilization.
-
-### 5. Real-Time Data Streaming
-
-**Objective**: Simulate real-time data streaming and evaluate the system's ability to update Bayesian inferences dynamically.
-
-**Conceptual Framework**:
-
-- Use a mock streaming data generator or a real-time data source.
-- Continuously feed the data into the Bayesian model and update the inferences.
-- Measure and log the latency and accuracy of updates.
-
-### Example Code Structure for Performance Benchmarking
+**E-commerce Recommendations** — A Bayesian system that updates product recommendation probabilities based on user behavior. Every click, view, or purchase refines the posterior probability for that user-product pair.
 
 ```python
-import time
-import psycopg2
-import numpy as np
-
-# Connect to our PostgreSQL database
-conn = psycopg2.connect("dbname=our_db user=our_user")
-
-def benchmark_query(query):
-    start_time = time.time()
-    cur = conn.cursor()
-    cur.execute(query)
-    cur.fetchall()
-    cur.close()
-    return time.time() - start_time
-
-def main():
-    # Bayesian Query Example (this is a placeholder)
-    bayesian_query = "SELECT * FROM our_table WHERE condition;"
-    traditional_query = "SELECT * FROM our_table WHERE condition;"
-
-    bayesian_time = benchmark_query(bayesian_query)
-    traditional_time = benchmark_query(traditional_query)
-
-    print(f"Bayesian Query Time: {bayesian_time} seconds")
-    print(f"Traditional Query Time: {traditional_time} seconds")
-
-if __name__ == "__main__":
-    main()
+def bayesian_update_for_user(user_id):
+    activities = fetch_user_activities(user_id)
+    for activity in activities:
+        product_id = activity['product_id']
+        action_type = activity['action_type']
+        updated_probability = calculate_updated_probability(action_type)
+        update_recommendation_probability(user_id, product_id, updated_probability)
 ```
 
-For actual implementation, replace the placeholder queries with our specific Bayesian and traditional statistical queries. This script measures and compares the execution times, serving as a starting point for the performance benchmarking simulation.
+**Stock Market Regime Detection** — Using Hidden Markov Models, we identify whether the market is in a "stable" or "volatile" regime. This isn't prediction—it's characterization. Knowing which regime you're in changes how you should interpret other signals.
 
-### Expanding the Frameworks
+**Trading Analysis** — Bayesian linear regression for predicting stock returns based on market indices and interest rates. We use variational inference here because markets move fast and you can't wait for MCMC to converge.
 
-For each simulation mentioned, we would need to adapt and expand these conceptual frameworks into detailed scripts. This involves:
+---
 
-- Specifying our Bayesian models and queries based on our project's requirements.
-- Tailoring data generation, loading, and processing steps to our datasets.
-- Implementing appropriate metrics and logging for analysis and comparison.
+## Our Methodology
+
+Building this wasn't just about writing code. We followed a structured research approach:
+
+### Algorithm Adaptation
+
+1. We reviewed Bayesian methods and selected those suited for predictive modeling, anomaly detection, and decision analysis
+2. Each algorithm got decomposed into SQL-compatible components—sequences of queries and PL/pgSQL functions
+3. We optimized for PostgreSQL specifically: analyzing query execution plans, applying indexing strategies, leveraging parallel query processing
+
+The hardest part? Making sure the algorithms stayed accurate when broken into database-friendly pieces. It's easy to introduce subtle bugs when you're translating mathematical operations into SQL.
+
+### Testing and Validation
+
+We built a proper benchmarking framework:
+
+- **Performance metrics**: Query execution time, CPU usage, memory consumption
+- **Accuracy metrics**: Precision and recall against known outcomes
+- **Scalability tests**: Increasing data volumes to find breaking points
+
+We tested against three baselines: standard Postgres queries, external Python-based analysis, and established statistical tools. The results have been encouraging—competitive performance with the added benefit of keeping everything inside the database.
+
+---
+
+## The Technical Stack
+
+For those who want to run our code or build on it, here's what we're using:
+
+- **PostgreSQL** with psycopg2 and asyncpg for database connectivity
+- **PyMC3** for probabilistic programming and ADVI
+- **NumPy** for numerical operations
+- **hmmlearn** for Hidden Markov Models
+- **Faker** for generating realistic test data
+- **Matplotlib/Seaborn** for visualization
+
+Everything's in the [requirements.txt](https://github.com/cartesiantrees/postgres-bayes/blob/main/requirements.txt).
+
+---
+
+## What's Next
+
+We're continuing to expand the algorithm library and improve PostgreSQL integration. Current focus areas:
+
+1. **Deeper SQL integration** — Moving more computation into stored procedures and custom PostgreSQL functions
+2. **Performance optimization** — There are still bottlenecks in our MCMC implementation we're working through
+3. **Additional simulations** — We're adding more real-world scenarios to validate the approach
+4. **Documentation** — Making it easier for others to use and contribute
+
+The JEI status gives us the freedom to focus on getting this right rather than rushing something to market. Good research takes time, and we'd rather ship something solid.
+
+---
+
+## Explore the Code
+
+Everything is open source under the Apache 2.0 license:
+
+**[github.com/cartesiantrees/postgres-bayes](https://github.com/cartesiantrees/postgres-bayes)**
+
+The repository includes:
+- `/algorithms` — Core Bayesian implementations (MCMC, Gibbs, VI, ABC)
+- `/simulations` — E-commerce, trading, and market regime detection examples
+- `/data_generation` — Tools for creating test datasets
+- `/docs` — Additional documentation
+
+---
+
+## Get in Touch
+
+We're always interested in talking to people working on similar problems or facing challenges where Bayesian methods might help. If you've got a use case, a question, or just want to discuss probabilistic databases, reach out.
+
+Some of our best insights have come from conversations with people dealing with real-world data problems we hadn't thought about. This work is difficult—we don't have all the answers—but we're convinced that probabilistic reasoning belongs inside the database, not bolted on as an afterthought.
