@@ -1,7 +1,7 @@
 [
   {
-    "title": "High Technical Standards",
-    "description": "We set uncompromising expectations of security, performance, and maintainability.",
+    "title": "Research-backed AI",
+    "description": "JEI-certified by the French government for genuine R&D. Our AI work is built on original research in Bayesian inference, not just API wrappers.",
     "image": {
       "url": "images/features/noun_branding_1885335.svg",
       "width": 80,
@@ -9,8 +9,8 @@
     }
   },
   {
-    "title": "Pragmatic Solutions",
-    "description": "Building robust systems, with proper data models, separation of concerns, and well-defined APIs.",
+    "title": "Production-first",
+    "description": "We prototype fast, but we engineer for production. Proper evaluation, monitoring, error handling, and cost control from day one.",
     "image": {
       "url": "images/features/noun_The Process_1885341.svg",
       "width": 80,
@@ -18,8 +18,8 @@
     }
   },
   {
-    "title": "Focus on team",
-    "description": "Improving skills of everyone involved, both individually and as a team, thus helping in the long-term success of your company",
+    "title": "Knowledge transfer",
+    "description": "We work embedded with your team and leave you owning the system. No vendor lock-in, no black boxes, no ongoing dependency.",
     "image": {
       "url": "images/features/noun_3d modeling_1885342.svg",
       "width": 80,

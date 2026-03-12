@@ -2,7 +2,7 @@
 title: "AI & LLM Solutions"
 date: 2018-11-18T12:33:46+10:00
 weight: 1
-description: "We build AI systems that work in production — LLM-powered apps, agentic workflows, RAG over proprietary data, and Bayesian inference in PostgreSQL. Paris-based, JEI-certified."
+description: "From LLM integration to agentic workflows to Bayesian inference in PostgreSQL — AI systems engineered for production, not just demos."
 ---
 
 ## The hard part isn't the model

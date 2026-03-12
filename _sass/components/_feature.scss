@@ -1,29 +1,35 @@
 .feature {
   height: 100%;
-  border: 1px solid $white-offset;
-  border-radius: 3px;
-  padding: 20px;
+  border: 1px solid darken($white-offset, 5%);
+  border-radius: 8px;
+  padding: 28px 24px;
   background-color: #ffffff;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    box-shadow: 0 4px 16px rgba(26, 54, 93, 0.08);
+  }
   .feature-image {
     flex: 0 0 auto;
-    width: 80px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
     display: flex;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 16px;
   }
   img {
     width: 100%;
     height: auto;
   }
   .feature-title {
+    font-weight: 600;
+    font-size: 1.1rem;
   }
   .feature-content {
     margin-bottom: 0;
-    margin-top: auto;
+    margin-top: 8px;
+    line-height: 1.6;
   }
 }

@@ -2,7 +2,7 @@
 title: "React & Next.js"
 date: 2018-11-18T12:33:46+10:00
 weight: 2
-description: "We build React and Next.js frontends for complex applications — AI-powered interfaces, data dashboards, internal tools, and customer-facing products. Fast, accessible, maintainable."
+description: "React and Next.js frontends for complex applications — AI-powered interfaces, data dashboards, internal tools, and customer-facing products."
 ---
 
 ## The frontend is where your users meet your technology

@@ -13,11 +13,12 @@
       > a {
         padding: 10px 12px 10px 12px;
         display: inline-block;
-        font-weight: normal;
+        font-weight: 500;
         text-decoration: none;
-        color: $primary;
+        color: $black;
         &:hover {
-          text-decoration: underline;
+          color: $secondary;
+          text-decoration: none;
         }
       }
       &.active {

@@ -2,7 +2,7 @@
 title: "Business Intelligence"
 date: 2018-11-18T12:33:46+10:00
 weight: 6
-description: "We set up Metabase and build BI infrastructure that your whole team can actually use — not just the engineers. Data modeling, dashboards, and data source integration done right."
+description: "Metabase setup and BI infrastructure your whole team can actually use — not just the engineers. Dashboards, data modeling, and source integration done right."
 ---
 
 ## Your data is probably more useful than you think

@@ -2,7 +2,7 @@
 title: "Python & Web APIs"
 date: 2018-11-18T12:33:46+10:00
 weight: 3
-description: "We build Python backends and APIs with Django and FastAPI — the infrastructure that powers web apps, AI systems, payment integrations, and data pipelines. Contributor to Stripe and open-source ecosystem."
+description: "Python backends and APIs with Django and FastAPI — the infrastructure behind web apps, AI systems, payment flows, and data pipelines."
 ---
 
 ![Python and Django](/images/pixeltrue-web-development-1.svg)
