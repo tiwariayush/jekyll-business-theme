@@ -2,7 +2,7 @@ baseurl: ''
 url: "https://cartesiantrees.com"
 permalink: pretty
 title: 'Cartesian Trees'
-description: "Cartesian Trees is a Paris-based tech consultancy specializing in AI, Bayesian inference, Python & Django APIs, React & Next.js, business intelligence, and data engineering. JEI-certified innovative enterprise."
+description: "Cartesian Trees is a JEI-certified AI solution partner in Paris. We build LLM-powered applications, agentic systems, RAG pipelines, and Bayesian inference engines — plus the Python, Django, React, and Next.js engineering to ship them into production."
 author:
   name: "Ayush Tiwari"
   url: "https://cartesiantrees.com"

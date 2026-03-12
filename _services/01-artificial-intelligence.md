@@ -1,14 +1,36 @@
 ---
-title: "Artificial Intelligence"
+title: "AI & LLM Solutions"
 date: 2018-11-18T12:33:46+10:00
-weight: 3
-description: "AI and machine learning consulting services — from realistic use cases to production deployment. We democratize data science with expertise in LLMs, traditional BI, and real-time ML."
+weight: 1
+description: "End-to-end AI solution development — LLM integration, agentic systems, RAG pipelines, Bayesian inference, and production ML deployment. From prototype to reliable, scalable AI in production."
 ---
 
 ![AI](/images/victor-c53HvA-blYQ-unsplash.jpg)
 
-## Democratizing Data Science, Artificial Intelligence, and Real-Time Machine Learning
+## From AI Prototype to Production
 
-We work on using AI to drive rapid progress, automate repeated tasks more and more. Despite the challenges associated with data projects, we offer valuable expertise and insights. Partnering with us brings significant business benefits. We excel in identifying realistic use cases and guide you from idea to return on investment.
+The gap between a working demo and a production AI system is where most projects die. We bridge that gap — helping companies build, deploy, and maintain AI systems that deliver real business value.
 
-With our extensive experience in traditional business intelligence, AI, and LLM algorithms, we provide valuable insights and uncover opportunities for your organization.
+### LLM Integration
+
+We integrate large language models into your product stack — OpenAI, Anthropic, Mistral, or open-source alternatives. This includes prompt engineering, output parsing, guardrails, cost optimization, and evaluation pipelines to measure quality over time.
+
+### Agentic Systems
+
+AI agents that can reason through multi-step problems, use tools, make decisions, and execute complex workflows. We design agentic architectures with proper error recovery, human-in-the-loop checkpoints, and observability so you know what your agents are doing and why.
+
+### RAG & Knowledge Systems
+
+Retrieval-augmented generation pipelines that ground LLM responses in your proprietary data. We handle the full pipeline: document ingestion, chunking strategies, embedding model selection, vector database setup, retrieval tuning, and response generation — optimized for your specific domain.
+
+### Bayesian Inference & Probabilistic AI
+
+Our [open-source research](https://github.com/cartesiantrees/postgres-bayes) brings Bayesian reasoning directly into PostgreSQL. When you need AI that quantifies uncertainty rather than just making predictions — recommendation engines, anomaly detection, risk assessment — this is where we go deep.
+
+### Production ML Engineering
+
+Models are cheap. Reliable production systems are not. We handle model serving, API design, monitoring, drift detection, fallback strategies, and the infrastructure (GCP, Kubernetes) to keep AI systems running at scale.
+
+---
+
+[Contact us](/contact) to discuss how AI can solve a specific problem in your business — not in theory, but in production.
