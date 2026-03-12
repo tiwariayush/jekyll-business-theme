@@ -1,57 +1,38 @@
 ---
-title: "React & NextJS"
+title: "React & Next.js"
 date: 2018-11-18T12:33:46+10:00
 weight: 2
-description: "React and Next.js frontend development services — performant web applications, server-side rendering, responsive UI/UX design, performance optimization, and third-party integrations."
+description: "We build React and Next.js frontends for complex applications — AI-powered interfaces, data dashboards, internal tools, and customer-facing products. Fast, accessible, maintainable."
 ---
 
-React is a popular JavaScript library used for building user interfaces. Next.js is a framework built on top of React, designed for server-rendered React applications with enhanced capabilities.
+## The frontend is where your users meet your technology
 
-## Objectives
+You can have the most sophisticated AI backend, the cleanest API, the best data pipeline in the world — and none of it matters if the interface is slow, confusing, or broken on mobile. The frontend is the part your users actually see and judge you by.
 
-1. To deliver highly performant and interactive web applications using the React library and Next.js framework.
-2. To provide scalable and maintainable frontend solutions that meet the unique requirements of our clients.
-3. To leverage the latest advancements in React and Next.js to deliver cutting-edge user experiences.
+We build frontends in React and Next.js, and we focus on a specific kind of project: applications with real complexity. Not marketing landing pages — there are cheaper ways to build those. We're talking about interfaces that display dynamic data, interact with AI systems, handle complex user workflows, and need to work reliably across devices.
 
-### Key Features of React and Next.js
+---
 
-- **Component-Based Architecture:** React's component-based architecture allows for modular and reusable UI components, enabling efficient development and easier maintenance.
+## The kind of frontends we build
 
-- **Virtual DOM:** React's virtual DOM enables efficient rendering and updates by selectively updating only the necessary parts of the UI.
+**Interfaces for AI-powered products.** When your backend is an LLM or an ML model, the frontend has unique challenges. Streaming responses that arrive token by token. Loading states for inference that might take 2 seconds or 20 seconds. Displaying confidence scores and uncertainty in a way that makes sense to non-technical users. Handling errors gracefully when the model produces garbage. We've built these interfaces and we know the patterns that work.
 
-- **Server-Side Rendering (SSR):** Next.js provides server-side rendering capabilities, allowing for improved performance and SEO optimization.
+**Data-heavy dashboards and internal tools.** Applications where performance matters because you're rendering tables with thousands of rows, charts that update in real time, or forms with complex validation logic. We use virtualization, memoization, and smart data fetching — not because we read about them, but because the app is unusable without them.
 
-- **Routing and Navigation:** Next.js simplifies routing and navigation by providing built-in support for client-side and server-side routing.
+**Customer-facing products.** SaaS applications, client portals, multi-step workflows. The kind of app where you need proper routing, authentication flows, state management that doesn't become a nightmare, and a codebase your team can maintain after we hand it off.
 
-- **Static Site Generation (SSG):** Next.js enables static site generation, which pre-renders pages at build time for optimal performance and caching.
+---
 
-- **API Routes:** Next.js includes API routes that allow for the creation of serverless functions to handle backend logic.
+## How we think about frontend work
 
-## Services Offered
+**Next.js for most things.** Server-side rendering for SEO-sensitive pages, static generation for content that doesn't change often, API routes when you need lightweight backend logic, and the App Router for layouts and data fetching patterns that keep the codebase organized. Next.js gives us sensible defaults for all the things you'd otherwise spend a week configuring.
 
-### 1. React and Next.js Development
+**Performance from the start, not as an afterthought.** We've taken over React codebases where the team shipped fast initially and then spent months trying to fix performance problems. Unnecessary re-renders, massive bundle sizes, unoptimized images, client-side fetching that should have been server-side. It's always harder to fix later. We build with performance budgets from the beginning — code splitting, lazy loading, proper caching headers, image optimization through Next.js, and Lighthouse scores that stay green as the app grows.
 
-Our experienced developers specialize in building robust and scalable web applications using React and Next.js. We follow best practices and industry standards to ensure efficient development and deliver high-quality code.
+**TypeScript, always.** Not optional, not partial. Full TypeScript coverage with strict mode. The time you save catching bugs at compile time instead of production is enormous, and it makes the codebase navigable for whoever works on it next.
 
-### 2. Performance Optimization
+**Testing the parts that matter.** We're not dogmatic about 100% code coverage. We write tests for the things that would hurt if they broke: authentication flows, payment forms, data display logic, and API integration points. We use React Testing Library for component behavior and Playwright for critical user journeys.
 
-We analyze and optimize React and Next.js applications to ensure optimal performance and responsiveness. Our experts identify performance bottlenecks, implement optimizations, and conduct thorough testing to deliver highly performant applications.
+---
 
-### 3. Responsive UI/UX Design
-
-We create visually appealing and user-friendly interfaces using React and Next.js. Our design team collaborates closely with clients to understand their target audience and deliver engaging user experiences across devices and screen sizes.
-
-### 4. Third-Party Integrations
-
-We integrate third-party services and APIs seamlessly into React and Next.js applications. Whether it's payment gateways, social media platforms, or other external services, our team ensures smooth integration and functionality.
-
-## Getting Started
-
-To get started with React and Next.js frontend development services, follow these steps:
-
-1. [Contact us](https://cartesiantrees.com/contact) to discuss your project requirements and objectives.
-2. We will schedule a consultation to understand your specific needs and provide a customized proposal.
-3. Upon agreement, we will commence the development process, ensuring regular communication and progress updates.
-4. We deliver the completed project, conduct thorough testing, and assist with deployment and post-launch support.
-
-
+If you're building a product that has real frontend complexity — especially if it involves AI, data visualization, or complex workflows — [let's talk](/contact). We're a good fit when the frontend isn't just a skin over an API but a core part of the user experience.

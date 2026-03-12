@@ -1,44 +1,42 @@
 ---
-title: "Pixel/Tracking APIs"
+title: "Tracking & Measurement"
 date: 2018-11-18T12:33:46+10:00
 weight: 5
-description: "Pixel tracking and Google Tag Manager implementation — conversion tracking, remarketing setup, and third-party ad service integration for Google Ads, Facebook Ads, and Twitter Ads."
+description: "We build measurement infrastructure that survives ad blockers, privacy regulations, and browser changes — Google Tag Manager, server-side tracking, conversion APIs, and proper attribution."
 ---
 
-Pixel tracking involves placing small snippets of code, known as pixels, on websites or landing pages to track user interactions, conversions, and other events. GTM and third-party ad services offer powerful tracking capabilities for digital marketing campaigns.
+## Measurement is an engineering problem now
 
-## Objectives
+Tracking used to be simple: drop a pixel on your page, watch the conversions roll in. That world is gone. Between iOS ATT, GDPR consent requirements, browser ITP, ad blockers, and the slow death of third-party cookies, the marketing team's carefully constructed attribution model is probably missing a significant chunk of reality.
 
-1. To assist businesses in implementing pixel tracking solutions using Google Tag Manager and other tracking APIs.
-2. To ensure accurate and reliable tracking of user interactions and conversions across websites and ad campaigns.
-3. To optimize ad targeting, retargeting, and campaign measurement using pixel data from various third-party ad services.
+The fix isn't more pixels — it's better architecture. Server-side tracking, proper consent management, first-party data strategies, and measurement setups that degrade gracefully when the browser won't cooperate. This is engineering work, not marketing work, and that's why we're the ones doing it.
 
-### Key Concepts of Pixel Tracking
+---
 
-- **Google Tag Manager (GTM):** GTM is a tag management system that simplifies the process of implementing and managing tracking pixels on websites, allowing for easy configuration and deployment.
+## What's probably wrong with your current setup
 
-- **Third-Party Ad Services:** Platforms like Google Ads, Facebook Ads, Twitter Ads, and others provide their own tracking pixels to track user interactions and conversions within their advertising ecosystem.
+If your tracking was set up more than two years ago and hasn't been seriously revisited, here's what's likely happening:
 
-- **Conversion Tracking:** Pixel tracking enables the measurement of various conversion events, such as purchases, form submissions, sign-ups, and other valuable actions taken by users.
+**Your numbers don't add up.** Google Analytics says one thing, Facebook Ads Manager says another, and your actual sales database says something different from both. The discrepancies aren't small — they can be 30-50%. This happens because each platform counts differently, consent blocks fire inconsistently, and events get lost or double-counted along the way.
 
-- **Remarketing and Retargeting:** Pixels enable the creation of custom audiences for remarketing and retargeting campaigns, allowing businesses to reach users who have shown interest in their products or services.
+**Your GTM container is a mess.** Someone added tags over the years, nobody removed the old ones, there are triggers firing that nobody understands, and the whole thing is fragile enough that a website redesign breaks half your tracking. We've audited GTM containers with 80+ tags where fewer than half were actually needed.
 
-## Services Offered
+**You're not consent-compliant.** GDPR and ePrivacy require actual consent before firing tracking pixels in the EU. If your consent banner is cosmetic — loads the trackers regardless of what the user clicks — you're exposed to fines and your data is legally questionable anyway.
 
-1. **Pixel Implementation with GTM:** We assist in implementing tracking pixels using Google Tag Manager, ensuring accurate placement and configuration for tracking user interactions and conversions.
+---
 
-   Example GTM Configuration:
-   ```
-   1. Create a new GTM container for your website.
-   2. Set up tags for different tracking pixels, such as Google Ads, Facebook Ads, or Twitter Ads.
-   3. Configure triggers to fire the tags based on specific events, such as page views or form submissions.
-   4. Publish the GTM container and verify that the tracking pixels are firing correctly.
-   ```
+## How we approach it
 
-2. **Third-Party Ad Service Integration:** We integrate tracking pixels from various ad services, such as Google Ads, Facebook Ads, and Twitter Ads, ensuring seamless data transmission and accurate measurement of ad campaign performance.
+**Audit first.** Before we change anything, we map what's currently firing on your site. Every tag, every pixel, every script. We compare what's supposed to be tracked against what's actually being tracked, identify gaps and redundancies, and document everything. This usually takes a few days and the results are consistently surprising.
 
-3. **Conversion Tracking and Optimization:** We help set up conversion tracking pixels to measure and optimize the performance of your marketing campaigns. We provide guidance on tracking key events, configuring conversion goals, and interpreting the data.
+**Clean GTM architecture.** We rebuild or restructure your Google Tag Manager setup with clear naming conventions, organized folders, proper trigger logic, and a data layer that your developers can feed from the application code. A good GTM setup should be maintainable by someone who didn't build it — that's the bar we aim for.
 
-4. **Remarketing and Retargeting Setup:** We assist in setting up remarketing and retargeting campaigns using pixels, enabling you to reach users who have previously interacted with your website or ads.
+**Server-side where it matters.** For critical conversions — purchases, signups, high-value actions — we implement server-side tracking alongside client-side. This means the event fires from your server regardless of what's happening in the browser. We tie this into [Facebook's Conversion API](/services/04-facebook-capi/), Google Ads' enhanced conversions, and any other platform you're running ads on.
 
-For any inquiries or questions, please reach out to our team using the [contact](/contact).
+**Consent that actually works.** We implement consent management that respects user choices and actually blocks tracking when it should. This means integrating your consent platform (Cookiebot, OneTrust, or similar) with GTM so that tags only fire after consent is given for the correct category. Not just legally compliant — technically correct.
+
+**Measurement you can trust.** Once the infrastructure is solid, we set up monitoring: automated checks that verify your key conversion events are still firing, alerting when event volume drops unexpectedly (which usually means something broke), and regular reconciliation between your tracking data and your actual database.
+
+---
+
+Tracking infrastructure is one of those things that quietly degrades until someone notices the numbers look wrong. If you suspect that's happening — or if you're about to launch campaigns and need to trust your data — [let's set it up properly](/contact).

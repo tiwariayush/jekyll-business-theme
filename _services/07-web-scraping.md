@@ -1,30 +1,48 @@
 ---
-title: "Web Scraping"
+title: "Data Extraction & Web Scraping"
 date: 2018-11-18T12:33:46+10:00
 weight: 7
-description: "Python web scraping services — data extraction with Beautiful Soup and Scrapy, data cleaning with Pandas, automated scraping pipelines, and ethical compliance."
+description: "We build Python-based data extraction pipelines — web scraping, API ingestion, document parsing — that feed your AI models, analytics, and business intelligence with clean, structured data."
 ---
 
-Web scraping is the process of extracting data from websites. Python offers powerful libraries and tools for web scraping, making it a popular choice for data extraction tasks.
+## AI is only as good as the data going into it
 
-### Key Concepts of Web Scraping with Python
+Every AI project, every analytics initiative, every business intelligence dashboard has the same dependency: data. And the data you need is rarely sitting in a clean database waiting for you. It's scattered across websites, PDFs, APIs, legacy systems, and spreadsheets. Getting it out, cleaning it up, and keeping it flowing is unglamorous work, but without it nothing else works.
 
-- **HTML Parsing:** Python libraries like Beautiful Soup and scrapy enable parsing HTML documents and navigating through the website's structure to extract desired data.
+We build data extraction pipelines in Python. Not one-off scripts that break next week — proper pipelines that run on a schedule, handle errors, adapt to source changes, and deliver clean, structured data wherever you need it.
 
-- **Data Extraction:** Using Python's requests library, web pages can be fetched and data can be extracted programmatically from specific elements, such as tables or paragraphs.
+---
 
-- **Data Cleaning and Processing:** Python provides various libraries, such as Pandas, for cleaning, processing, and structuring scraped data into desired formats, such as CSV or JSON.
+## The difference between a script and a pipeline
 
-- **Automation and Scalability:** Python's versatility allows for automating web scraping tasks, handling large volumes of data, and integrating with other systems and databases.
+Anyone can write a Beautiful Soup script that scrapes a webpage. That's a tutorial exercise. The hard parts are everything else:
 
-## Services Offered
+**What happens when the source changes.** Websites redesign. APIs update their schemas. PDF formats vary from one document to the next. A script that worked yesterday returns garbage today. We build extraction logic that's resilient to minor changes, detects when something has fundamentally broken, and alerts you instead of silently producing bad data.
 
-1. **Web Scraping Implementation:** We assist in implementing web scraping solutions using Python, leveraging libraries like Beautiful Soup and requests to extract data from websites.
+**Scale and rate limiting.** When you need to extract data from thousands of pages, you can't just fire off requests as fast as possible. You'll get blocked, or you'll overload the source, or both. We handle concurrency, respect rate limits, rotate headers appropriately, and design the crawl patterns to be efficient without being aggressive.
 
-2. **Data Cleaning and Processing:** We clean and process scraped data using Python libraries like Pandas and NumPy. We ensure the extracted data is structured and ready for analysis.
+**Data quality.** Raw scraped data is messy. Inconsistent formats, missing fields, duplicates, encoding issues, HTML artifacts in text fields. We build cleaning and validation steps into the pipeline — with Pandas and custom logic — so what comes out the other end is genuinely usable. If you're feeding this data into an AI model or a BI dashboard, garbage in means garbage out, and we take that seriously.
 
-3. **Automation and Integration:** We automate web scraping tasks by developing Python scripts that can be scheduled or triggered to collect data periodically. We also integrate web scraping with other systems and databases.
+**Scheduling and monitoring.** A pipeline that runs once is a script. A pipeline that runs every day at 3am and sends you an alert if something fails is infrastructure. We use cron, task queues, or orchestration tools depending on the complexity, with logging and monitoring so you know it's working without having to check manually.
 
-4. **Ethical Web Scraping Practices:** We adhere to ethical web scraping practices, ensuring compliance with website terms of service and legal regulations while respecting website owners' rights.
+---
 
-For any inquiries or questions, please reach out to our team using the contact.
+## What we typically extract
+
+**Web data for competitive intelligence.** Pricing data, product catalogs, job listings, public filings — structured and delivered to your database on whatever schedule you need.
+
+**Documents and PDFs.** Extracting structured data from unstructured documents — invoices, contracts, reports. For complex or variable formats, we combine traditional parsing with LLM-based extraction to handle the cases that rule-based approaches can't.
+
+**API data aggregation.** When you need to pull data from multiple third-party APIs, normalize the formats, and merge them into a single coherent dataset. We handle authentication, pagination, rate limiting, and retry logic.
+
+**Training data for AI models.** If you're building or fine-tuning an ML model, you need training data. We extract, clean, label, and structure data specifically for model training — with proper attention to deduplication, balance, and quality.
+
+---
+
+## On ethics and legality
+
+We respect robots.txt, terms of service, and applicable regulations. We don't scrape behind authentication without permission, we don't overwhelm servers, and we advise clients when a scraping approach crosses ethical or legal lines. For data sources with public APIs, we'll always prefer the API — it's more reliable anyway.
+
+---
+
+If you need a data source that doesn't come with a clean API, or you're building an AI system and need the training data to make it work — [let's talk](/contact).

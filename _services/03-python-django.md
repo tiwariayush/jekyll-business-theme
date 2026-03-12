@@ -1,64 +1,52 @@
 ---
 title: "Python & Web APIs"
 date: 2018-11-18T12:33:46+10:00
-weight: 1
-description: "Expert Python, Django, and FastAPI development services — API integration, endpoint development, authentication, data validation, rate limiting, and comprehensive API documentation."
+weight: 3
+description: "We build Python backends and APIs with Django and FastAPI — the infrastructure that powers web apps, AI systems, payment integrations, and data pipelines. Contributor to Stripe and open-source ecosystem."
 ---
 
-Our company specializes in API integration using Python, Django and FastAPI.
 ![Python and Django](/images/pixeltrue-web-development-1.svg)
 
-# Objectives
+## The backend is where the real work happens
 
+A well-designed API is invisible. Users don't see it, designers don't think about it, and business stakeholders rarely ask about it. But it's the thing that determines whether your application is fast or slow, whether it can handle growth, whether it's secure, and whether your team can build on top of it without wanting to rewrite everything in six months.
 
-By leveraging the capabilities of Python and web framework chosen, we enable efficient and secure communication between systems, empowering your applications with enhanced functionality and interoperability.
+We build backends in Python — primarily with Django and FastAPI — and we've been doing it long enough to have strong opinions about how to do it well.
 
-What we will deliver:
+---
 
+## Django or FastAPI? Depends on the problem.
 
-- **Seamless API Integration:** We excel at integrating APIs into your applications, whether it's consuming external APIs or building your own API ecosystem. We ensure smooth communication and data exchange between different systems, enabling seamless integration with third-party services. 
+We don't have a religious preference. Django is the right choice when you need a full-featured application with authentication, admin interfaces, ORM, and a mature ecosystem of packages — which describes most business applications. FastAPI is the right choice when you need raw speed, async capabilities, and automatic OpenAPI documentation — which describes most AI serving endpoints and high-throughput APIs.
 
-- **Robust Endpoint Development:** Using Django and FastAPI, we develop robust and secure endpoints for your API. These endpoints allow clients to interact with your application, enabling data retrieval, submission, and other necessary operations.
+Sometimes we use both in the same project. Django for the main application, FastAPI for the performance-critical inference endpoints. The choice should follow from the problem, not the other way around.
 
-- **Authentication and Authorization:** We implement secure authentication and authorization mechanisms to protect your APIs from unauthorized access. We can integrate various authentication methods such as token-based authentication, OAuth, or custom authentication based on your specific requirements.
- 
-- **Data Validation and Serialization:** We leverage Django and FastAPI's powerful validation and serialization features to ensure that the data exchanged through the API is valid, consistent, and properly structured. This helps in maintaining data integrity and enhancing the overall reliability of your API.
+---
 
-- **Rate Limiting and Throttling:** To prevent abuse and ensure optimal performance, we can implement rate limiting and throttling mechanisms. These features help control the number of API requests made within a specific timeframe, preventing misuse and maintaining a high level of service quality.
+## What we've actually built
 
-- **API Documentation:** We understand the importance of clear and comprehensive API documentation. We can generate detailed documentation using tools like Swagger/OpenAPI for FastAPI or Django Rest Framework's built-in documentation tools. This enables easy adoption and usage of your API by both internal and external developers. 
+We're not going to list "Authentication" and "Rate Limiting" as services — those are just things that competent backends have. Instead, here's the kind of work we do:
 
-- **Versioning and Upgrades:** As your application evolves, we can assist in versioning and handling API upgrades. We ensure backward compatibility and smooth transitions, minimizing disruptions and maintaining compatibility with existing integrations.
+**APIs that serve AI models.** When you've got a trained model that needs to serve predictions to real users, someone has to build the API around it. That means input validation, async processing for slow inference, proper error handling when the model fails, response caching, cost-aware routing between different models, and monitoring that tells you latency percentiles, not just averages. We've done this with LLM-powered systems, Bayesian inference engines, and traditional ML models.
 
-- **Error Handling and Logging:** We implement robust error handling and logging mechanisms to track and handle errors effectively. This helps in debugging and troubleshooting API issues, providing valuable insights for continuous improvement.
+**Payment and billing infrastructure.** We've contributed to the [Stripe API ecosystem](https://github.com/stripe) and built payment integrations from scratch — subscription management, metered billing, webhook handling, idempotent charge creation. Payment code has zero tolerance for bugs, and we write it accordingly: extensive test coverage, careful error handling, and audit logging for every transaction.
 
-## Steps
+**Data ingestion pipelines.** APIs that receive data from external sources — webhooks from third-party services, file uploads, streaming data — validate it, transform it, and store it correctly. The hard part is usually the edge cases: what happens when the webhook comes twice, when the file is malformed, when the external service changes their payload format without telling you.
 
-Here's an example of how generally we proceed with the frontend and backend work to create a web app:
+**Internal tools and admin systems.** Django's admin is remarkably powerful if you know how to extend it. We've built custom admin interfaces that let non-technical team members manage complex business logic — content moderation queues, order management systems, user account tooling — without developers needing to be involved in day-to-day operations.
 
-|Step| Stage              | Frontend                                                       | Backend                                                        |
-|--|------------------ | ----------------------------------------------------------------- | ------------------------------------------------------------------ |
-|1.| **Planning**    | Define project goals, requirements, and user experience (UX)       | Discuss technical requirements and system architecture            |
-| |                    | Create wireframes and design mockups                               | Plan API endpoints and data models                                 |
-| |                    | Decide on the technology stack and frameworks                      | Determine server and database technologies                         |
-|2.| **Development** | Implement user interfaces (UI) based on design mockups              | Develop server-side logic and APIs                                 |
-| |                    | Write HTML, CSS, and JavaScript code for frontend                  | Implement authentication and authorization mechanisms              |
-| |                    | Incorporate responsive design and ensure cross-browser compatibility | Handle data validation and serialization                           |
-| |                    | Integrate with frontend libraries and frameworks                    | Connect to the database and implement data persistence             |
-|3.| **Integration** | Collaborate with the backend team to integrate frontend with APIs   | Collaborate with the frontend team to integrate with UI components |
-| |                    | Conduct integration testing and resolve any issues                  | Test API functionality and ensure proper data exchange             |
-| |                    | Optimize frontend performance and ensure smooth user experience     | Optimize backend performance and address any scalability concerns  |
-|4.| **Testing**     | Conduct unit testing on frontend components and UI interactions     | Perform unit testing on APIs and backend functionality             |
-| |                    | Conduct functional testing and ensure UI responsiveness             | Conduct integration testing to ensure frontend-backend coherence    |
-| |                    | Conduct browser compatibility testing                               | Perform load testing and identify any performance bottlenecks      |
-|5.| **Deployment**  | Prepare deployment packages for frontend code                       | Deploy backend code to the server and set up necessary resources   |
-| |                    | Configure hosting environment and deploy frontend                   | Set up continuous integration and deployment pipelines             |
-| |                    | Ensure proper DNS configuration and SSL certificates               | Monitor server performance and handle any post-deployment issues   |
-|6.| **Maintenance** | Provide ongoing support for UI enhancements and bug fixes            | Monitor and troubleshoot backend functionality and performance    |
-| |                    | Regularly update frontend libraries and dependencies                | Apply security patches and handle database maintenance tasks       |
-| |                    | Analyze user feedback and incorporate improvements                  | Collaborate on future feature enhancements and system updates      |
+---
 
-***Note:** The above table is a general representation of the workflow between frontend and backend teams during the development of a web app. The specific tasks and stages may vary based on project requirements and team preferences.*
+## How we think about API design
 
+Good API design is about making the next developer's life easier — whether that's your frontend team, a third-party integration partner, or your future self. A few things we care about:
 
-[Contact Us](/contact) for more detailed information about our services and how we can help you with your project.
+**Consistency over cleverness.** Every endpoint should behave the same way — same error format, same pagination style, same authentication pattern. We follow REST conventions where they make sense and deviate only when there's a good reason.
+
+**Fail loudly with useful errors.** A 500 error with no context is hostile to whoever is trying to integrate with your API. We design error responses that tell you what went wrong, where, and ideally how to fix it.
+
+**Tests that catch real bugs.** Not tests that cover lines of code for the sake of metrics, but tests that exercise the actual workflows your API supports, including the unhappy paths. We write integration tests that hit the database, test the authentication flow end-to-end, and verify that your payment webhook handler does the right thing when Stripe sends a duplicate event.
+
+---
+
+If you need a backend built, an API redesigned, or an existing system that's becoming hard to maintain — [reach out](/contact). We're particularly good at projects where reliability matters: payment systems, AI infrastructure, and data pipelines where silent failures are not an option.
