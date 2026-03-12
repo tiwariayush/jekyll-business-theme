@@ -1,7 +1,12 @@
-baseurl: '/'
-siteUrl: "https://cartesiantrees.com"
+baseurl: ''
+url: "https://cartesiantrees.com"
 permalink: pretty
 title: 'Cartesian Trees'
+description: "Cartesian Trees is a Paris-based tech consultancy specializing in AI, Bayesian inference, Python & Django APIs, React & Next.js, business intelligence, and data engineering. JEI-certified innovative enterprise."
+author:
+  name: "Ayush Tiwari"
+  url: "https://cartesiantrees.com"
+lang: "en"
 
 logo_info:
   mobile: "images/logo/logo-main.png"
@@ -41,6 +46,7 @@ sass:
 plugins:
   - jekyll-environment-variables
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile

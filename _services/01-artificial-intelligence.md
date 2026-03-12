@@ -2,6 +2,7 @@
 title: "Artificial Intelligence"
 date: 2018-11-18T12:33:46+10:00
 weight: 3
+description: "AI and machine learning consulting services — from realistic use cases to production deployment. We democratize data science with expertise in LLMs, traditional BI, and real-time ML."
 ---
 
 ![AI](/images/victor-c53HvA-blYQ-unsplash.jpg)

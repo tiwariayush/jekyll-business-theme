@@ -2,6 +2,7 @@
 title: "Facebook CAPI"
 date: 2018-11-18T12:33:46+10:00
 weight: 4
+description: "Facebook Conversion API implementation and optimization — server-side tracking, enhanced privacy, accurate attribution, and pixel-to-CAPI migration for improved ad performance and ROI."
 ---
 
 The Facebook Conversion API (formerly known as the Server-Side API) allows businesses to send user event data directly to Facebook servers from their websites or apps. This data helps track and measure various user actions, such as purchases, sign-ups, and other valuable conversions.

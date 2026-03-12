@@ -1,7 +1,7 @@
 ---
 title: About
 layout: page
-description: About
+description: "Learn about Cartesian Trees, a JEI-certified tech consultancy in Paris founded by Ayush Tiwari (IIT Roorkee). We specialize in custom web development, code review, consulting, and technical training for Python, Django, React, and AI projects."
 bodyClass: page-about
 ---
 ## Our approach as a company

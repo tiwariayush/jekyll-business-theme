@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: contact
-description: Contact
+description: "Get in touch with Cartesian Trees for AI consulting, Python & Django development, React & Next.js engineering, or business intelligence services. Based in Paris, serving clients worldwide."
 ---
 
 

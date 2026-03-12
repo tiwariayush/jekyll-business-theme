@@ -2,6 +2,7 @@
 title: "Business Intelligence"
 date: 2018-11-18T12:33:46+10:00
 weight: 6
+description: "Business intelligence consulting with Metabase — implementation, data modeling, visualization, dashboard design, and data source integration for data-driven decision making."
 ---
 
 Metabase is an open-source business intelligence tool that simplifies data analytics and visualization. It allows users to explore, query, and create interactive dashboards from various data sources, providing insights to drive informed decision-making.

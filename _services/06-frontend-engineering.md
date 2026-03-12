@@ -2,6 +2,7 @@
 title: "React & NextJS"
 date: 2018-11-18T12:33:46+10:00
 weight: 2
+description: "React and Next.js frontend development services — performant web applications, server-side rendering, responsive UI/UX design, performance optimization, and third-party integrations."
 ---
 
 React is a popular JavaScript library used for building user interfaces. Next.js is a framework built on top of React, designed for server-rendered React applications with enhanced capabilities.

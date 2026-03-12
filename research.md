@@ -1,7 +1,7 @@
 ---
 title: Our Research
 layout: page
-description: Research
+description: "Explore Cartesian Trees' research on Bayesian inference in PostgreSQL — MCMC, Gibbs sampling, variational inference, and real-world simulations for e-commerce, trading, and market analysis. Open source under Apache 2.0."
 bodyClass: page-research
 ---
 

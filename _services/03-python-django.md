@@ -2,6 +2,7 @@
 title: "Python & Web APIs"
 date: 2018-11-18T12:33:46+10:00
 weight: 1
+description: "Expert Python, Django, and FastAPI development services — API integration, endpoint development, authentication, data validation, rate limiting, and comprehensive API documentation."
 ---
 
 Our company specializes in API integration using Python, Django and FastAPI.

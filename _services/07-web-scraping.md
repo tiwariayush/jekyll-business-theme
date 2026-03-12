@@ -2,6 +2,7 @@
 title: "Web Scraping"
 date: 2018-11-18T12:33:46+10:00
 weight: 7
+description: "Python web scraping services — data extraction with Beautiful Soup and Scrapy, data cleaning with Pandas, automated scraping pipelines, and ethical compliance."
 ---
 
 Web scraping is the process of extracting data from websites. Python offers powerful libraries and tools for web scraping, making it a popular choice for data extraction tasks.

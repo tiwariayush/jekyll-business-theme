@@ -1,7 +1,7 @@
 ---
-title:
+title: Our Clients
 layout: page
-description: Our Clients
+description: "Discover the companies and organizations that trust Cartesian Trees for AI, web development, business intelligence, and data engineering solutions."
 bodyClass: page-clients
 ---
 

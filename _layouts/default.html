@@ -3,38 +3,83 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — Tech Consultancy in Paris{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}">
-  <!-- Google Fonts CDN -->
+  <link rel="icon" type="image/png" href="{{ '/images/logo/favicon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Self host font -->
-  <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-d`isplay.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
-  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
-  {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% else %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
+
+  {% assign page_desc = page.description | default: site.description %}
+  <meta name="description" content="{{ page_desc }}" />
+
+  {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% elsif page.title %}<meta property="og:title" content="{{ page.title }} | {{ site.title }}"/>{% else %}<meta property="og:title" content="{{ site.title }}"/>{% endif %}
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="{{ url }}"/>
-  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}"/>{% endif %}
-  {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}"/>{% elsif site.logo %}<meta property="og:image" content="{{ site.logo | absolute_url }}"/>{% endif %}
+  <meta property="og:description" content="{{ page_desc }}"/>
+  <meta property="og:locale" content="en_US" />
+
   <meta name="twitter:card" content="summary"/>
-  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}"/>{% endif %}
-  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}"/>{% endif %}
+  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}"/>{% endif %}
+  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}"/>{% endif %}
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cartesian Trees",
+    "url": "https://cartesiantrees.com",
+    "logo": "https://cartesiantrees.com/images/logo/logo-main.png",
+    "description": "{{ site.description | escape }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "154 Rue de Vaugirard",
+      "addressLocality": "Paris",
+      "postalCode": "75015",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "tiwari.ayush2412@gmail.com",
+      "telephone": "+33769318813",
+      "contactType": "customer service"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Ayush Tiwari"
+    },
+    "sameAs": [
+      "https://github.com/tiwariayush"
+    ]
+  }
+  </script>
+
+  {% if page.layout == 'service' or page.layout == 'services' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "{{ page.title | escape }}",
+    "provider": {
+      "@type": "Organization",
+      "name": "Cartesian Trees"
+    },
+    "description": "{{ page_desc | escape }}",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Worldwide"
+    }
+  }
+  </script>
+  {% endif %}
+
   {% seo %}
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9LVR8V26"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9X9LVR8V26');
-</script>
-
 
 <body class='page {{layout.bodyClass}}'>
   {% include main-menu-mobile.html %}

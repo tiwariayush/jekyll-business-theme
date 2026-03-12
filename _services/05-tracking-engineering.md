@@ -2,6 +2,7 @@
 title: "Pixel/Tracking APIs"
 date: 2018-11-18T12:33:46+10:00
 weight: 5
+description: "Pixel tracking and Google Tag Manager implementation — conversion tracking, remarketing setup, and third-party ad service integration for Google Ads, Facebook Ads, and Twitter Ads."
 ---
 
 Pixel tracking involves placing small snippets of code, known as pixels, on websites or landing pages to track user interactions, conversions, and other events. GTM and third-party ad services offer powerful tracking capabilities for digital marketing campaigns.
