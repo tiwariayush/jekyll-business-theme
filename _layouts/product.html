@@ -1,0 +1,21 @@
+---
+layout: default
+bodyClass: "page-product"
+---
+
+<div class="container pb-6 pt-6 pt-md-5 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-10">
+      <div class="product product-single">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="product-single-meta">
+          {% if page.status %}<span class="product-status product-status-{{ page.status | slugify }}">{{ page.status }}</span>{% endif %}
+          {% if page.license %}<span class="product-license">{{ page.license }}</span>{% endif %}
+          {% if page.repo %}<a href="{{ page.repo }}" class="product-repo-link" target="_blank" rel="noopener noreferrer">GitHub →</a>{% endif %}
+        </div>
+        {% if page.stack %}<div class="product-stack">{{ page.stack }}</div>{% endif %}
+        <div class="content">{{ content }}</div>
+      </div>
+    </div>
+  </div>
+</div>

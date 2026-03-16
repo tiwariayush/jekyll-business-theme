@@ -25,6 +25,9 @@ collections:
   services:
     output: true
     sort_by: weight
+  products:
+    output: true
+    sort_by: weight
   team:
     output: true
 
@@ -34,6 +37,11 @@ defaults:
       type: "services"
     values:
       layout: "service"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
   - scope:
       path: ""
       type: "team"

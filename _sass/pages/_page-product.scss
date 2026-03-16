@@ -1,0 +1,110 @@
+.product-summary {
+  border: 1px solid darken($white-offset, 5%);
+  border-radius: 8px;
+  padding: 28px 24px;
+  height: 100%;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    box-shadow: 0 4px 16px rgba(26, 54, 93, 0.08);
+  }
+}
+
+.product-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.product-status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: darken($white-offset, 4%);
+  color: $steel;
+}
+
+.product-status-active {
+  background: #e6f4ea;
+  color: #1a7f37;
+}
+
+.product-status-in-development {
+  background: #fff3e0;
+  color: #b45309;
+}
+
+.product-license {
+  font-size: 12px;
+  color: $steel;
+}
+
+.product-description {
+  color: $steel;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.product-stack {
+  font-size: 13px;
+  color: lighten($steel, 10%);
+  margin-bottom: 12px;
+  font-family: $font-family-mono;
+}
+
+.product-repo-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: $secondary;
+  text-decoration: none;
+  &:hover {
+    color: darken($secondary, 10%);
+  }
+}
+
+.product-single {
+  .product-single-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .product-stack {
+    margin-bottom: 24px;
+    padding: 10px 14px;
+    background: $white-offset;
+    border-radius: 6px;
+    display: inline-block;
+  }
+}
+
+.page-product {
+  .content {
+    > p {
+      &:first-of-type {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        font-weight: regular;
+        color: rgb(104, 104, 104);
+      }
+    }
+  }
+}

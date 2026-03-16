@@ -1,9 +1,12 @@
 main:
-  - name: "Research"
-    url: "/research/"
-    weight: 2
   - name: "Services"
     url: "/services/"
+    weight: 1
+  - name: "Products"
+    url: "/products/"
+    weight: 2
+  - name: "Research"
+    url: "/research/"
     weight: 3
   - name: "About"
     url: "/about/"
@@ -11,9 +14,6 @@ main:
   - name: "Contact"
     url: "/contact/"
     weight: 5
-  - name: "Our Clients"
-    url: "/clients/"
-    weight: 6
 
 footer:
   - name: "Home"
