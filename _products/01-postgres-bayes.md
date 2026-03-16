@@ -1,5 +1,5 @@
 ---
-title: "postgres-bayes"
+title: "Postgres Bayes"
 weight: 1
 description: "Bayesian inference algorithms running directly inside PostgreSQL. MCMC, Gibbs sampling, variational inference, and real-world simulations for e-commerce, trading, and market analysis."
 repo: "https://github.com/cartesiantrees/postgres-bayes"

@@ -3,6 +3,8 @@ title: "Business Intelligence"
 date: 2018-11-18T12:33:46+10:00
 weight: 6
 description: "Metabase setup and BI infrastructure your whole team can actually use, not just the engineers. Dashboards, data modeling, and source integration done right."
+tags: ["Metabase", "PostgreSQL", "Dashboards", "SQL", "Data modeling"]
+tagline: "Metabase setup your whole team can actually use."
 ---
 
 ## Your data is probably more useful than you think

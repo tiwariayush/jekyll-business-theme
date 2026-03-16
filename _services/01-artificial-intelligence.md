@@ -3,6 +3,8 @@ title: "AI & LLM Solutions"
 date: 2018-11-18T12:33:46+10:00
 weight: 1
 description: "LLM integration, agentic workflows, RAG pipelines, and Bayesian inference in PostgreSQL. AI systems engineered for production, not just demos."
+tags: ["OpenAI", "Anthropic", "Mistral", "RAG", "Agents", "Bayesian", "PostgreSQL"]
+tagline: "LLMs, agents, and Bayesian inference, engineered for production."
 ---
 
 ## The hard part isn't the model

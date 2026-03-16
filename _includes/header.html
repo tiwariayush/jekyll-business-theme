@@ -1,10 +1,16 @@
 <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="{{ '/' | relative_url }}"><img width="{{ site.logo_info.desktop_width }}" height="{{ site.logo_info.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo_info.desktop | relative_url }}" /></a>
+      <a href="{{ '/' | relative_url }}">
+        <img width="{{ site.logo_info.desktop_width }}" height="{{ site.logo_info.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo_info.desktop | relative_url }}" />
+        <span class="logo-badge">Jeune Entreprise Innovante</span>
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="{{ '/' | relative_url }}"><img width="{{ site.logo_info.mobile_width }}" height="{{ site.logo_info.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo_info.mobile | relative_url }}" /></a>
+      <a href="{{ '/' | relative_url }}">
+        <img width="{{ site.logo_info.mobile_width }}" height="{{ site.logo_info.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo_info.mobile | relative_url }}" />
+        <span class="logo-badge">JEI</span>
+      </a>
     </div>
     {% include main-menu.html %}
     {% include hamburger.html %}

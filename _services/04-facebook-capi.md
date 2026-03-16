@@ -3,6 +3,8 @@ title: "Facebook CAPI"
 date: 2018-11-18T12:33:46+10:00
 weight: 4
 description: "iOS 14 and ad blockers broke your Facebook tracking. The Conversion API fixes it: server-side events, pixel migration, deduplication, and attribution that works."
+tags: ["Facebook CAPI", "Server-side", "Meta Ads", "Attribution"]
+tagline: "Fix the tracking that iOS 14 and ad blockers broke."
 ---
 
 ## Your Facebook tracking is probably broken

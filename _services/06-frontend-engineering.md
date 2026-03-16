@@ -3,6 +3,8 @@ title: "React & Next.js"
 date: 2018-11-18T12:33:46+10:00
 weight: 2
 description: "React and Next.js frontends for complex applications: AI-powered interfaces, data dashboards, internal tools, and customer-facing products."
+tags: ["React", "Next.js", "TypeScript", "SSR", "Playwright"]
+tagline: "Frontends for AI products, dashboards, and complex apps."
 ---
 
 ## The frontend is where your users meet your technology

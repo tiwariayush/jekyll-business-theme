@@ -3,6 +3,8 @@ title: "Data Extraction & Web Scraping"
 date: 2018-11-18T12:33:46+10:00
 weight: 7
 description: "Python data extraction pipelines (web scraping, API ingestion, document parsing) that feed your AI models and analytics with clean, structured data."
+tags: ["Python", "Scrapy", "Pandas", "BeautifulSoup", "ETL"]
+tagline: "Data extraction pipelines that feed your AI and analytics."
 ---
 
 ## AI is only as good as the data going into it

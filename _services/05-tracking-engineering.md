@@ -3,6 +3,8 @@ title: "Tracking & Measurement"
 date: 2018-11-18T12:33:46+10:00
 weight: 5
 description: "Measurement infrastructure that survives ad blockers, privacy regulations, and browser changes. GTM, server-side tracking, and attribution you can trust."
+tags: ["GTM", "Google Ads", "Server-side", "GDPR", "Consent"]
+tagline: "Measurement infrastructure that survives ad blockers and privacy rules."
 ---
 
 ## Measurement is an engineering problem now

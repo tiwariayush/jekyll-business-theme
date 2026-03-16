@@ -3,6 +3,8 @@ title: "Python & Web APIs"
 date: 2018-11-18T12:33:46+10:00
 weight: 3
 description: "Python backends and APIs with Django and FastAPI. The infrastructure behind web apps, AI systems, payment flows, and data pipelines."
+tags: ["Python", "Django", "FastAPI", "PostgreSQL", "Stripe", "REST"]
+tagline: "Backends and APIs that power AI systems and payments."
 ---
 
 ![Python and Django](/images/pixeltrue-web-development-1.svg)
