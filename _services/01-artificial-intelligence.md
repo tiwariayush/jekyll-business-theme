@@ -23,15 +23,45 @@ When it is the right tool, we typically work through a few layers:
 
 **The grind of making it production-ready.** This is where we spend most of our time and where most projects stall without experienced help. It means building proper evaluation pipelines so you can measure quality across hundreds of test cases, not just the five you tried by hand. It means handling the edge cases: what happens when the user asks something completely off-topic, or when the context window fills up, or when the embedding search returns irrelevant results. It means setting up monitoring so you know when quality degrades before your users do.
 
-## Areas where we go deep
+## Solutions we deliver
 
-**LLM-powered applications.** We've integrated OpenAI, Anthropic, and Mistral models into production systems. The real skill isn't the API call; it's the prompt architecture, the output validation, the retry logic, the cost monitoring, and the evaluation framework you build around it. We know the failure modes because we've hit them.
+These are the concrete things clients walk away with. Not strategy decks or "AI readiness assessments," but working systems.
 
-**Agentic workflows.** AI agents that can take multi-step actions, use tools, and make decisions. The challenge is reliability: agents fail in creative ways, and you need proper error recovery, logging, and human-in-the-loop checkpoints. We build these with observability from day one so you can see exactly what the agent did, what it decided, and why.
+### Knowledge base and document Q&A
 
-**RAG systems.** Most RAG implementations we've seen in the wild perform poorly because the chunking is wrong, the embedding model is generic, or the retrieval step returns quantity over relevance. We tune the full pipeline: how documents are split, which embedding model fits your domain, how retrieval is scored, and how the final response is generated and grounded.
+The most common project we get asked about. You have internal documentation, policies, product manuals, support tickets, contracts, whatever, and you want people to be able to ask questions and get accurate answers grounded in that content.
 
-**Bayesian inference and probabilistic reasoning.** This is our research background. We've built [Bayesian inference algorithms that run directly inside PostgreSQL](https://github.com/cartesiantrees/postgres-bayes) (MCMC, Gibbs sampling, variational inference) because we believe probabilistic reasoning should live where the data lives, not in a separate Python notebook. When you need a system that quantifies uncertainty (how confident are we in this recommendation? how likely is this transaction to be fraud?), this is the approach that gives you honest answers instead of just a number.
+What this actually involves: ingesting your documents, figuring out the right way to split and index them (this varies a lot depending on whether you're dealing with short support articles or 200-page technical manuals), choosing an embedding model that works for your domain, wiring up retrieval and generation, and then the critical part that most teams skip: building evaluation so you can prove the system gives correct answers and catch the cases where it doesn't. You end up with a Q&A system you can embed in your product, your internal tools, or a standalone interface, with a dashboard showing answer quality over time.
+
+### AI features inside your existing product
+
+You already have a product and you want to add intelligence to it. Maybe it's a writing assistant, a smart search that understands intent instead of just keywords, an automatic categorization system, or a feature that summarizes long content for your users.
+
+The tricky part here isn't the AI itself, it's integrating it cleanly into your existing codebase and UX without creating a slow, expensive, or unreliable experience. We handle the backend integration (API design, caching, fallbacks), the prompt engineering, and the frontend work to make it feel like a natural part of your product. We pay close attention to latency and cost, because an AI feature that takes 8 seconds to respond or costs you €0.10 per request isn't going to survive contact with real users.
+
+### Workflow automation with agents
+
+You have a process that involves a person collecting information from one system, making a decision, updating another system, and maybe sending a notification. It happens dozens or hundreds of times a day, it follows a roughly predictable pattern, but it has enough edge cases that a simple script won't cut it.
+
+This is where agentic systems earn their keep. We build agents that can pull data from your CRM, database, or APIs, reason through the logic, take actions, and escalate to a human when they're uncertain. The key design choice is always: where does the agent act autonomously, and where does it stop and ask? We set those boundaries carefully, build logging so you can audit every decision the agent made, and include a human override for the cases where the agent gets it wrong. Because it will get things wrong sometimes, and the system needs to handle that gracefully.
+
+### Document processing and data extraction
+
+Invoices, contracts, forms, emails, PDFs, whatever. You receive unstructured documents and need structured data out of them. The old approach was rule-based parsing, which breaks every time the format changes slightly.
+
+We combine traditional parsing (for the predictable parts) with LLM-based extraction (for the parts that vary). The system reads a document, pulls out the fields you care about, validates them against your expected schema, flags anything it's unsure about for human review, and writes the structured result to your database. For high-volume use cases (thousands of invoices per month, for example), we optimize for cost by using smaller models where possible and only escalating to more capable models when needed.
+
+### Decision systems under uncertainty
+
+This is where our Bayesian research background comes in. Some problems aren't about generating text or automating workflows. They're about making better decisions when you don't have complete information.
+
+How confident should you be in a product recommendation? Is this transaction likely fraudulent, and how sure are you? What's the probability that demand will spike next quarter, and what's the range? Standard ML models give you a single number. Bayesian approaches give you a distribution, which means you know not just the answer but how much to trust it. We've built [these algorithms to run directly inside PostgreSQL](https://github.com/cartesiantrees/postgres-bayes), so the reasoning happens where your data already lives. This matters for recommendation engines, risk scoring, anomaly detection, and any scenario where acting on a wrong prediction has real consequences.
+
+### AI monitoring and evaluation
+
+Maybe you already shipped an AI feature. It worked well initially, but now you're not sure. Users are complaining about bad answers, costs have crept up, and you have no way to tell whether the system is getting better or worse over time.
+
+We build the observability layer: automated evaluation suites that test your system against real examples on a schedule, dashboards that track accuracy, relevance, latency, and cost trends, alerts that fire when quality dips below your threshold, and tooling that makes it easy to investigate specific failures. Think of it as the monitoring and alerting you'd build for any production service, but adapted for the specific failure modes of AI systems (hallucination, drift, context window overflow, embedding quality degradation).
 
 ## The part nobody wants to talk about: cost and evaluation
 
