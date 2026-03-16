@@ -152,7 +152,49 @@ The repository includes:
 - `/data_generation` for creating test datasets
 - `/docs` for additional documentation
 
-## [Update] (Dec 2025) Where This Research Meets the LLM Era
+## References
+
+The research that informed postgres-bayes. These papers shaped our understanding of the landscape and helped us identify where the gaps were.
+
+**Bayesian inference and probabilistic programming**
+
+- Salvatier, J., Wiecki, T.V. and Fonnesbeck, C. *Probabilistic Programming in Python using PyMC3.* PeerJ Computer Science, 2016.
+- Welling, M. and Teh, Y.W. *Bayesian Learning via Stochastic Gradient Langevin Dynamics.* ICML, 2011.
+- Carpenter, B. et al. *Stan: A Probabilistic Programming Language.* Journal of Statistical Software, 2017.
+- Wang, Z. et al. *Bayesian Optimization in a Billion Dimensions via Random Embeddings.* Journal of Artificial Intelligence Research, 2016.
+
+**In-database machine learning**
+
+- Neumann, T. et al. *In-Database Machine Learning.* VLDB, 2020.
+- Hellerstein, J. et al. *MADlib: A Scalable In-Database Machine Learning Framework.* VLDB Endowment, 2012.
+- Kaufmann, M. et al. *Efficient and Accurate In-Database Machine Learning with SQL Code Generation in Python.* IEEE, 2019.
+- Ordonez, C. and Pitchaimalai, S.K. *Bayesian Classifiers Programmed in SQL.* IEEE TKDE, 2010.
+- Sandha, S. et al. *In-Database Distributed Machine Learning with Teradata.* VLDB, 2019.
+
+**Machine learning systems and frameworks**
+
+- Abadi, M. et al. *TensorFlow: A System for Large-Scale Machine Learning.* OSDI, 2016.
+- Kraska, T. et al. *MLbase: A Distributed Machine-Learning System.* CIDR, 2013.
+- Dean, J. and Ghemawat, S. *MapReduce: Simplified Data Processing on Large Clusters.* Communications of the ACM, 2008.
+- Wang, Y. et al. *SQLFlow: Bridging SQL and Machine Learning.* arXiv, 2020.
+
+**Industrial applications of Bayesian methods**
+
+- Nagpal, C. et al. *Latent Bayesian Inference for Robust Earnings Estimates.* NeurIPS Workshop on AI in Financial Services, 2020.
+- Arthi, R. et al. *TinyML Healthcare Decision Systems.* IEEE ICHI, 2022.
+
+## Get in touch
+
+If you're working on problems where Bayesian methods might help, or you're interested in in-database machine learning, we'd like to hear from you. Some of our best insights have come from conversations with people dealing with real-world data problems we hadn't considered.
+
+This work is difficult. We don't have all the answers. But we're convinced that probabilistic reasoning belongs inside the database, not bolted on as an afterthought.
+
+
+
+
+# [Update] (Dec 2025)
+
+## Where This Research Meets the LLM Era
 
 The original postgres-bayes research was designed before large language models became the dominant paradigm in AI. Since then, the landscape has shifted dramatically. But rather than making our work obsolete, the rise of LLMs has made in-database probabilistic reasoning *more* relevant, not less. Here's why, and where we're taking the research next.
 
@@ -226,40 +268,3 @@ The thesis hasn't changed: probabilistic reasoning belongs inside the database. 
 - Rajkumar, N. et al. *Evaluating the Text-to-SQL Capabilities of Large Language Models.* arXiv, 2022.
 - Li, J. et al. *Can LLM Already Serve as A Database Interface? A Big Bench for Large-Scale Database Grounded Text-to-SQL.* NeurIPS, 2023.
 - Mialon, G. et al. *Augmented Language Models: a Survey.* TMLR, 2023.
-
-## References
-
-The research that informed postgres-bayes. These papers shaped our understanding of the landscape and helped us identify where the gaps were.
-
-**Bayesian inference and probabilistic programming**
-
-- Salvatier, J., Wiecki, T.V. and Fonnesbeck, C. *Probabilistic Programming in Python using PyMC3.* PeerJ Computer Science, 2016.
-- Welling, M. and Teh, Y.W. *Bayesian Learning via Stochastic Gradient Langevin Dynamics.* ICML, 2011.
-- Carpenter, B. et al. *Stan: A Probabilistic Programming Language.* Journal of Statistical Software, 2017.
-- Wang, Z. et al. *Bayesian Optimization in a Billion Dimensions via Random Embeddings.* Journal of Artificial Intelligence Research, 2016.
-
-**In-database machine learning**
-
-- Neumann, T. et al. *In-Database Machine Learning.* VLDB, 2020.
-- Hellerstein, J. et al. *MADlib: A Scalable In-Database Machine Learning Framework.* VLDB Endowment, 2012.
-- Kaufmann, M. et al. *Efficient and Accurate In-Database Machine Learning with SQL Code Generation in Python.* IEEE, 2019.
-- Ordonez, C. and Pitchaimalai, S.K. *Bayesian Classifiers Programmed in SQL.* IEEE TKDE, 2010.
-- Sandha, S. et al. *In-Database Distributed Machine Learning with Teradata.* VLDB, 2019.
-
-**Machine learning systems and frameworks**
-
-- Abadi, M. et al. *TensorFlow: A System for Large-Scale Machine Learning.* OSDI, 2016.
-- Kraska, T. et al. *MLbase: A Distributed Machine-Learning System.* CIDR, 2013.
-- Dean, J. and Ghemawat, S. *MapReduce: Simplified Data Processing on Large Clusters.* Communications of the ACM, 2008.
-- Wang, Y. et al. *SQLFlow: Bridging SQL and Machine Learning.* arXiv, 2020.
-
-**Industrial applications of Bayesian methods**
-
-- Nagpal, C. et al. *Latent Bayesian Inference for Robust Earnings Estimates.* NeurIPS Workshop on AI in Financial Services, 2020.
-- Arthi, R. et al. *TinyML Healthcare Decision Systems.* IEEE ICHI, 2022.
-
-## Get in touch
-
-If you're working on problems where Bayesian methods might help, or you're interested in in-database machine learning, we'd like to hear from you. Some of our best insights have come from conversations with people dealing with real-world data problems we hadn't considered.
-
-This work is difficult. We don't have all the answers. But we're convinced that probabilistic reasoning belongs inside the database, not bolted on as an afterthought.
