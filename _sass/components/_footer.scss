@@ -1,63 +1,56 @@
 .footer {
   background: $footer-background-color;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 32px 0;
   .footer-inner {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 24px;
     @include media-breakpoint-up(sm) {
-      justify-content: space-between;
       flex-direction: row;
-      align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0;
+    }
+  }
+  .footer-left {
+    .social {
+      margin-top: 12px;
     }
   }
   .footer-title {
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: $font-family-heading;
-    font-weight: bold;
-    margin-bottom: 10px;
-    @include media-breakpoint-up(sm) {
-      margin: 0;
-    }
+    font-weight: 600;
+    margin: 0 0 8px 0;
   }
-  ul {
-    list-style: none;
+  .footer-address,
+  .footer-contact {
+    color: rgba(#ffffff, 0.7);
+    font-size: 13px;
     margin: 0;
-    padding: 0;
-    li {
-      color: $footer-text-color;
-      font-size: 1rem;
-      a {
-        color: $footer-text-color;
-        text-decoration: none;
-        padding: 12px 14px 12px 0;
-        display: block;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    @include media-breakpoint-up(sm) {
-      height: inherit;
-      display: flex;
+    line-height: 1.6;
+  }
+  .footer-right {
+    ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      align-items: center;
-      justify-content: flex-end;
+      display: flex;
+      gap: 4px;
       li {
-        list-style: none;
-        margin-right: 10px;
-        &:last-of-type {
-          margin-right: 0;
-        }
         a {
-          display: inline-block;
-          height: 40px;
-          padding: 10px 8px 10px 8px;
+          color: rgba(#ffffff, 0.85);
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 4px 10px;
+          border-radius: 4px;
+          &:hover {
+            color: #ffffff;
+            background: rgba(#ffffff, 0.1);
+            text-decoration: none;
+          }
         }
       }
     }

@@ -1,0 +1,257 @@
+.page-pricing {
+  .pricing-subtitle {
+    font-size: 1.1rem;
+    color: $steel;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+  }
+}
+
+.pricing-card {
+  border: 1px solid darken($white-offset, 5%);
+  border-radius: 10px;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    box-shadow: 0 6px 24px rgba(26, 54, 93, 0.1);
+  }
+}
+
+.pricing-card-featured {
+  border-color: $secondary;
+  border-width: 2px;
+  .pricing-card-header {
+    background: $primary;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    .pricing-plan-name,
+    .pricing-price,
+    .pricing-duration {
+      color: #fff;
+    }
+    .pricing-duration {
+      opacity: 0.75;
+    }
+  }
+}
+
+.pricing-card-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $secondary;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.pricing-card-header {
+  padding: 28px 24px 20px;
+  text-align: center;
+  border-bottom: 1px solid $white-offset;
+}
+
+.pricing-plan-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $black;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pricing-price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: $black;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.pricing-duration {
+  font-size: 14px;
+  color: $steel;
+  margin-top: 4px;
+}
+
+.pricing-card-body {
+  padding: 24px;
+  flex: 1;
+}
+
+.pricing-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: $steel;
+  margin-bottom: 16px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black;
+    padding: 5px 0 5px 22px;
+    position: relative;
+    margin: 0;
+    &:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1a7f37;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
+}
+
+.pricing-best-for {
+  font-size: 13px;
+  color: $steel;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid $white-offset;
+}
+
+.pricing-card-footer {
+  padding: 0 24px 24px;
+  text-align: center;
+  .pricing-cta {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+// Form
+
+.pricing-form-wrapper {
+  background: $white-offset;
+  border-radius: 10px;
+  padding: 36px 32px;
+  h2 {
+    margin-bottom: 4px;
+  }
+  .pricing-form-subtitle {
+    color: $steel;
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+}
+
+.pricing-form {
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 16px;
+    }
+  }
+  .form-group {
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 4px;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid darken($white-offset, 10%);
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: $font-family-base;
+    color: $black;
+    background: #fff;
+    transition: border-color 0.15s ease;
+    &:focus {
+      outline: none;
+      border-color: $secondary;
+      box-shadow: 0 0 0 3px rgba($secondary, 0.12);
+    }
+    &::placeholder {
+      color: lighten($steel, 20%);
+    }
+  }
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5568' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    font-family: $font-family-base;
+    margin-top: 4px;
+  }
+}
+
+.pricing-form-compact {
+  .form-row-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 8px;
+    }
+    input[type="email"] {
+      flex: 1;
+    }
+    select {
+      flex: 0 0 auto;
+      @include media-breakpoint-up(md) {
+        width: 140px;
+      }
+    }
+    button {
+      flex: 0 0 auto;
+      margin-top: 0;
+      height: auto;
+      padding: 10px 24px;
+    }
+  }
+}
+
+// Additional pricing notes
+
+.pricing-notes {
+  text-align: center;
+  padding-top: 8px;
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: $steel;
+    margin-bottom: 6px;
+  }
+}

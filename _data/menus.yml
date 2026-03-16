@@ -2,23 +2,32 @@ main:
   - name: "Services"
     url: "/services/"
     weight: 1
+  - name: "Pricing"
+    url: "/pricing/"
+    weight: 2
+  - name: "Products"
+    url: "/products/"
+    weight: 3
+  - name: "Research"
+    url: "/research/"
+    weight: 4
+  - name: "About"
+    url: "/about/"
+    weight: 5
+  - name: "Contact"
+    url: "/contact/"
+    weight: 6
+
+footer:
+  - name: "Services"
+    url: "/services/"
+    weight: 1
   - name: "Products"
     url: "/products/"
     weight: 2
-  - name: "Research"
-    url: "/research/"
-    weight: 3
   - name: "About"
     url: "/about/"
+    weight: 3
+  - name: "Contact"
+    url: "/contact/"
     weight: 4
-  - name: "Contact"
-    url: "/contact/"
-    weight: 5
-
-footer:
-  - name: "Home"
-    url: "/"
-    weight: 1
-  - name: "Contact"
-    url: "/contact/"
-    weight: 2

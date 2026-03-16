@@ -1,18 +1,19 @@
 <div class="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
-          <h2 class="footer-title">{{site.title}}</h2>
-          <ul>
-            {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
-            {% for item in footermenu %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h2 class="footer-title">{{ site.title }}</h2>
+        {% if site.data.seo.company_address %}<p class="footer-address">{{ site.data.seo.company_address }}</p>{% endif %}
+        {% if site.data.seo.company_contact %}<p class="footer-contact">{{ site.data.seo.company_contact }}</p>{% endif %}
+        {% if site.data.social %}{% include social.html %}{% endif %}
+      </div>
+      <div class="footer-right">
+        <ul>
+          {% assign footermenu = site.data.menus.footer | sort: 'weight' %}
+          {% for item in footermenu %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>
