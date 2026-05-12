@@ -1,0 +1,104 @@
+---
+layout: default
+bodyClass: "page-about"
+---
+
+{% assign a = site.data.about %}
+
+<div class="intro intro-small">
+  <div class="container">
+    <div class="row about-hero">
+      <div class="col-12 col-md-10 col-lg-9">
+        {% if a.hero.eyebrow %}<span class="section-eyebrow">{{ a.hero.eyebrow }}</span>{% endif %}
+        <h1 class="about-title">{{ a.hero.title }}</h1>
+        {% if a.hero.lede %}<p class="about-lede">{{ a.hero.lede }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pb-6 pb-md-10">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 about-narrative content">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if a.founder %}
+<div class="strip strip-soft">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="section-head">
+      <span class="section-eyebrow">Who we are</span>
+      <h2 class="section-title">The person you'll actually work with</h2>
+    </div>
+
+    <div class="founder">
+      {% if a.founder.photo and a.founder.photo != '' %}
+      <div class="founder-photo-col">
+        <img class="founder-photo" src="{{ a.founder.photo | relative_url }}" alt="{{ a.founder.name }}" loading="lazy" />
+      </div>
+      {% else %}
+      <div class="founder-photo-col">
+        <div class="founder-monogram" aria-hidden="true">{{ a.founder.initials | default: a.founder.name | slice: 0, 1 }}</div>
+      </div>
+      {% endif %}
+
+      <div class="founder-body">
+        <div class="founder-id">
+          <span class="founder-name">{{ a.founder.name }}</span>
+          <span class="founder-meta">
+            {% if a.founder.role %}{{ a.founder.role }}{% endif %}
+            {% if a.founder.role and a.founder.location %} · {% endif %}
+            {% if a.founder.location %}{{ a.founder.location }}{% endif %}
+          </span>
+        </div>
+        {% if a.founder.bio %}<p class="founder-bio">{{ a.founder.bio }}</p>{% endif %}
+        {% if a.founder.links %}
+        <ul class="founder-links">
+          {% for link in a.founder.links %}
+            {% if link.url and link.url != '' %}
+            <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} <span aria-hidden="true">&rarr;</span></a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if a.stack %}
+<div class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="section-head">
+      {% if a.stack.eyebrow %}<span class="section-eyebrow">{{ a.stack.eyebrow }}</span>{% endif %}
+      {% if a.stack.title %}<h2 class="section-title">{{ a.stack.title }}</h2>{% endif %}
+      {% if a.stack.intro %}<p class="section-intro">{{ a.stack.intro }}</p>{% endif %}
+    </div>
+
+    <div class="stack-grid">
+      {% for cat in a.stack.categories %}
+      <div class="stack-cat">
+        <h3 class="stack-cat-title">{{ cat.title }}</h3>
+        <ul class="stack-cat-items">
+          {% for item in cat.items %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="strip strip-soft">
+  <div class="container pt-6 pb-6 pt-md-8 pb-md-8">
+    <div class="about-closing">
+      <p class="about-closing-text">Trying to figure out where AI fits, or hit the wall between demo and production?</p>
+      <a class="link-arrow" href="{{ 'contact' | relative_url }}">Let's talk <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</div>

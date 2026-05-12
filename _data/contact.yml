@@ -1,3 +1,26 @@
 email: 'tiwari.ayush2412@gmail.com'
 phone: '+33 7 69 31 88 13'
 contact_button_link: 'contact'
+location: 'Paris, France'
+response_time: 'Usually within 24 hours'
+languages: 'EN · FR'
+# Optional booking link. Leave blank to hide.
+booking_url: ''
+links:
+  - label: 'GitHub'
+    url: 'https://github.com/tiwariayush'
+  - label: 'LinkedIn'
+    url: ''
+
+topics:
+  eyebrow: "What we love hearing about"
+  title: "Where we tend to be most useful"
+  items:
+    - title: "Production AI struggles"
+      body: "You shipped a demo, now it needs to handle real traffic, real edge cases, and a budget."
+    - title: "Tracking and attribution under iOS 14"
+      body: "Pixel-based measurement is broken. You need server-side events, CAPI, and signal you can actually trust."
+    - title: "Django to FastAPI migrations"
+      body: "Legacy backends slowing under load. We've led migrations with full observability and zero downtime."
+    - title: "Bayesian or probabilistic decisions"
+      body: "Recommendation, risk scoring, anomaly detection. Anywhere you need an answer with a confidence attached."

@@ -3,39 +3,46 @@ layout: default
 bodyClass: "page-services"
 ---
 
-<div class="intro">
+<div class="intro intro-small">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        {{ content }}
+    <div class="row services-hero">
+      <div class="col-12 col-md-10 col-lg-8">
+        {% if page.intro_eyebrow %}<span class="section-eyebrow">{{ page.intro_eyebrow }}</span>{% endif %}
+        <h1 class="services-title">{{ page.intro_title | default: page.title }}</h1>
+        {% if page.intro_lede %}<p class="services-lede">{{ page.intro_lede }}</p>{% endif %}
+        <div class="services-actions">
+          <a class="link-arrow" href="{{ 'work' | relative_url }}">See past engagements <span aria-hidden="true">&rarr;</span></a>
+          <a class="link-arrow" href="{{ 'contact' | relative_url }}">Talk to us <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" loading="lazy" />
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
 
-<div class="container pt-6 pb-6">
-  <div class="row">
-    {% for service in site.services %}
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary service-card">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
-          </h2>
-          <p>{% if service.description %}{{ service.description }}{% else %}{{ service.content | markdownify | strip_html | truncate: 120 }}{% endif %}</p>
+<div class="strip strip-soft">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="services-list">
+      {% for service in site.services %}
+      <a class="service-row" href="{{ service.url | relative_url }}">
+        <div class="service-row-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+        <div class="service-row-body">
+          <h2 class="service-row-title">{{ service.title }} <span class="service-row-arrow" aria-hidden="true">&rarr;</span></h2>
+          {% if service.tagline %}<p class="service-row-tagline">{{ service.tagline }}</p>{% elsif service.description %}<p class="service-row-tagline">{{ service.description }}</p>{% endif %}
           {% if service.tags %}
-          <div class="service-tags">
-            {% for tag in service.tags %}<span class="service-tag">{{ tag }}</span>{% endfor %}
+          <div class="service-row-tags">
+            {% for tag in service.tags %}<span class="service-row-tag">{{ tag }}</span>{% endfor %}
           </div>
           {% endif %}
         </div>
-      </div>
+      </a>
+      {% endfor %}
     </div>
-    {% endfor %}
+
+    <div class="services-closing">
+      <p class="services-closing-text">Not sure which one applies, or working on something that doesn't fit a single line above?</p>
+      <a class="link-arrow" href="{{ 'contact' | relative_url }}">Let's talk <span aria-hidden="true">&rarr;</span></a>
+    </div>
   </div>
 </div>
+
+{{ content }}

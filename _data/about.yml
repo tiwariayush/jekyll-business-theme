@@ -1,0 +1,79 @@
+hero:
+  eyebrow: "About"
+  title: "Most companies don't have an AI problem. They have a deployment problem."
+  lede: >
+    The models are there. The APIs are there. What's missing is someone who
+    can take a promising prototype and turn it into a system that runs
+    reliably in production, handles edge cases, doesn't cost a fortune at
+    scale, and that your team can maintain after we leave.
+
+founder:
+  name: "Ayush Tiwari"
+  initials: "AT"
+  role: "Founder, Cartesian Trees"
+  location: "Paris, France"
+  # Optional: relative path to a portrait, e.g. "images/about/ayush.jpg".
+  # When unset, the layout renders a typographic block instead of a photo.
+  photo: ""
+  bio: >
+    Engineering degree from IIT Roorkee (B.Tech, 2012–2016). Before
+    starting Cartesian Trees, Ayush worked with American and French
+    companies across a wide range of engineering challenges: contributing
+    to Stripe's payment infrastructure, building Facebook Conversions API
+    integrations, contributing to Metabase (open-source BI), and working
+    on Pyodide (Python in the browser).
+  links:
+    - label: "GitHub"
+      url: "https://github.com/tiwariayush"
+    - label: "IIT Roorkee"
+      url: "https://www.lesechos.fr/weekend/business-story/inde-dans-les-coulisses-de-ces-ecoles-qui-faconnent-lelite-de-la-silicon-valley-1397124"
+
+stack:
+  eyebrow: "What we work with"
+  title: "Depth where it matters"
+  intro: "Whatever fits the problem. The areas below are where our depth lives."
+  categories:
+    - title: "AI and data"
+      items:
+        - "LLMs (OpenAI, Anthropic, Mistral, OSS)"
+        - "Agentic frameworks"
+        - "RAG systems"
+        - "Bayesian inference (PyMC)"
+        - "NLP with spaCy"
+        - "Embeddings and vector search"
+        - "Evaluation frameworks"
+    - title: "Backend"
+      items:
+        - "Python"
+        - "Django"
+        - "FastAPI"
+        - "PostgreSQL (deep)"
+        - "asyncpg"
+        - "SQL"
+    - title: "Frontend"
+      items:
+        - "React"
+        - "Next.js"
+        - "TypeScript"
+    - title: "Infrastructure"
+      items:
+        - "GCP"
+        - "Azure API Management"
+        - "Kubernetes"
+        - "Docker"
+        - "CI/CD (GitHub Actions)"
+    - title: "Data"
+      items:
+        - "NumPy"
+        - "SciPy"
+        - "Pandas"
+        - "Metabase"
+        - "Pipeline engineering"
+        - "Scraping and extraction"
+    - title: "Open source"
+      items:
+        - "Stripe API"
+        - "Facebook CAPI"
+        - "Metabase"
+        - "Pyodide"
+        - "postgres-bayes (ours)"

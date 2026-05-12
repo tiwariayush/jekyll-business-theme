@@ -1,17 +1,94 @@
 ---
-title: Contact
 layout: default
 bodyClass: "page-contact"
 ---
 
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                {% include call.html show_button=false %}
-                <div class="content mt-4">{{content}}</div>
-            </div>
-        </div>
+{% assign c = site.data.contact %}
+
+<div class="intro intro-small">
+  <div class="container">
+    <div class="row contact-hero">
+      <div class="col-12 col-md-7">
+        <span class="section-eyebrow">Get in touch</span>
+        <h1 class="contact-title">Let's talk about your AI or backend problem.</h1>
+        <p class="contact-lede">
+          Tell us what you're trying to ship, what's in your way, and what you've tried.
+          The more concrete, the faster we can tell you whether we can help.
+        </p>
+        {% if c.response_time %}
+        <p class="contact-response">
+          <span class="contact-response-dot"></span>{{ c.response_time }}
+        </p>
+        {% endif %}
+        <div class="content contact-extra">{{ content }}</div>
+      </div>
+
+      <div class="col-12 col-md-5 contact-methods-col">
+        <ul class="contact-methods">
+          {% if c.email %}
+          <li class="contact-method">
+            <span class="contact-method-label">Email</span>
+            <a class="contact-method-value" href="mailto:{{ c.email }}">{{ c.email }}</a>
+          </li>
+          {% endif %}
+          {% if c.phone %}
+          <li class="contact-method">
+            <span class="contact-method-label">Phone</span>
+            <a class="contact-method-value" href="tel:{{ c.phone | replace: ' ', '' }}">{{ c.phone }}</a>
+          </li>
+          {% endif %}
+          {% if c.location %}
+          <li class="contact-method">
+            <span class="contact-method-label">Location</span>
+            <span class="contact-method-value">{{ c.location }}</span>
+          </li>
+          {% endif %}
+          {% if c.languages %}
+          <li class="contact-method">
+            <span class="contact-method-label">Languages</span>
+            <span class="contact-method-value">{{ c.languages }}</span>
+          </li>
+          {% endif %}
+          {% if c.booking_url and c.booking_url != '' %}
+          <li class="contact-method contact-method-cta">
+            <a class="link-arrow" href="{{ c.booking_url }}">Book a 30-min call <span aria-hidden="true">&rarr;</span></a>
+          </li>
+          {% endif %}
+        </ul>
+
+        {% if c.links %}
+        <ul class="contact-links">
+          {% for link in c.links %}
+            {% if link.url and link.url != '' %}
+            <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} <span aria-hidden="true">&rarr;</span></a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
+
+{% if c.topics and c.topics.items %}
+<div class="strip strip-soft">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="section-head">
+      {% if c.topics.eyebrow %}<span class="section-eyebrow">{{ c.topics.eyebrow }}</span>{% endif %}
+      {% if c.topics.title %}<h2 class="section-title">{{ c.topics.title }}</h2>{% endif %}
+    </div>
+
+    <div class="topic-list">
+      {% for topic in c.topics.items %}
+      <div class="topic">
+        <div class="topic-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+        <div class="topic-body">
+          <h3 class="topic-title">{{ topic.title }}</h3>
+          <p class="topic-text">{{ topic.body }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
