@@ -20,13 +20,14 @@
     display: none;
   }
   img {
-    width: 32px;
+    width: 160px;
     height: auto;
+    display: block;
   }
   a {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
   }
 }

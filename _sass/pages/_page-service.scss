@@ -13,54 +13,65 @@
 }
 
 .service-card {
-  border: 1px solid darken($white-offset, 5%);
-  border-radius: 8px;
-  padding: 24px 22px;
   height: 100%;
-  background: #fff;
+  padding: 8px 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.2s ease;
-  &:hover {
-    box-shadow: 0 4px 16px rgba(26, 54, 93, 0.08);
-  }
+  position: relative;
+  transition: transform 0.2s ease;
+
   .service-content {
     display: flex;
     flex-direction: column;
     height: 100%;
     p {
       flex: 1;
+      color: $steel;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 12px;
     }
   }
+
   .service-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
+    letter-spacing: -0.005em;
     margin-bottom: 8px;
     a {
       color: $black;
       text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      transition: background-size 0.25s ease, color 0.2s ease;
       &:hover {
         color: $secondary;
+        background-size: 100% 1px;
       }
     }
   }
 }
 
 .service-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 4px;
+  display: block;
+  margin-top: auto;
+  font-family: $font-family-mono;
+  font-size: 12px;
+  color: lighten($steel, 15%);
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 .service-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 500;
-  font-family: $font-family-mono;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: $white-offset;
-  color: $steel;
-  letter-spacing: 0.01em;
+  display: inline;
+  &:not(:last-child)::after {
+    content: " · ";
+    color: lighten($steel, 30%);
+    margin: 0 2px;
+  }
 }

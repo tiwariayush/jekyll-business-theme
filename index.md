@@ -6,7 +6,6 @@ description: "Cartesian Trees is a JEI-certified AI solution partner in Paris. L
 intro_image: "images/illustrations/pixeltrue-teaching-1.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
-show_call_box: true
 ---
 
 # Your AI Solution Partner

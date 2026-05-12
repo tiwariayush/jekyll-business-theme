@@ -8,9 +8,10 @@ bodyClass: "page-home"
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         {{ content }}
-        {% if page.show_call_box %}
-          {% include call.html show_button=true %}
-        {% endif %}
+        <div class="intro-actions">
+          <a class="button button-primary" href="{{ site.data.contact.contact_button_link | relative_url }}">Book a discovery call</a>
+          <a class="link-arrow" href="{{ 'services' | relative_url }}">Explore our work <span aria-hidden="true">&rarr;</span></a>
+        </div>
       </div>
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -23,15 +24,19 @@ bodyClass: "page-home"
 
 <div class="strip">
   <div class="container pt-6 pb-6 pb-md-10">
-    <div class="row justify-content-start">
+    <div class="section-head">
+      <span class="section-eyebrow">What we do</span>
+      <h2 class="section-title">Services</h2>
+    </div>
+    <div class="row justify-content-start service-grid">
       {% assign limit = site.home.limit_services | default: 6 %}
       {% for service in site.services limit: limit %}
-      <div class="col-12 col-md-4 mb-3">
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="service service-summary service-card">
           <div class="service-content">
-            <h2 class="service-title">
+            <h3 class="service-title">
               <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
-            </h2>
+            </h3>
             <p>{% if service.tagline %}{{ service.tagline }}{% elsif service.description %}{{ service.description | truncate: 80 }}{% else %}{{ service.content | markdownify | strip_html | truncate: 80 }}{% endif %}</p>
             {% if service.tags %}
             <div class="service-tags">
@@ -43,29 +48,31 @@ bodyClass: "page-home"
       </div>
       {% endfor %}
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-start">
       <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
+        <a class="link-arrow" href="{{ "services" | relative_url }}">View all services <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </div>
 </div>
 
 {% if site.data.features %}
-<div class="strip strip-grey">
+<div class="strip strip-soft">
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-
+    <div class="section-head">
+      <span class="section-eyebrow">How we work</span>
+      <h2 class="section-title">Why teams pick us</h2>
+    </div>
+    <div class="row feature-grid">
       {% for feature in site.data.features %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="feature">
           {% if feature.emoji %}<div class="feature-icon">{{ feature.emoji }}</div>{% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
+          <h3 class="feature-title">{{ feature.title }}</h3>
           <div class="feature-content">{{ feature.description }}</div>
         </div>
       </div>
       {% endfor %}
-
     </div>
   </div>
 </div>
