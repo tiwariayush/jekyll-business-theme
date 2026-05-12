@@ -1,0 +1,119 @@
+---
+layout: default
+bodyClass: "page-work"
+---
+
+{% assign w = site.data.work %}
+
+<div class="intro intro-small">
+  <div class="container">
+    <div class="row work-hero">
+      <div class="col-12 col-md-7">
+        {% if w.intro.eyebrow %}<span class="section-eyebrow">{{ w.intro.eyebrow }}</span>{% endif %}
+        <h1 class="work-title">{{ w.intro.title }}</h1>
+        {% if w.intro.lede %}<p class="work-lede">{{ w.intro.lede }}</p>{% endif %}
+      </div>
+      {% if w.metrics %}
+      <div class="col-12 col-md-5 work-hero-metrics-col">
+        <div class="metrics-grid">
+          {% for metric in w.metrics %}
+          <div class="metric">
+            <div class="metric-value">{{ metric.value }}</div>
+            <div class="metric-label">{{ metric.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if w.cases %}
+<div class="strip strip-soft">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="section-head">
+      <span class="section-eyebrow">Case studies</span>
+      <h2 class="section-title">A few representative engagements</h2>
+    </div>
+
+    <div class="case-list">
+      {% for case in w.cases %}
+      <article class="case">
+        <header class="case-header">
+          <div class="case-meta">
+            {% if case.sector %}<span class="case-meta-item">{{ case.sector }}</span>{% endif %}
+            {% if case.geography %}<span class="case-meta-item">{{ case.geography }}</span>{% endif %}
+            {% if case.scale %}<span class="case-meta-item">{{ case.scale }}</span>{% endif %}
+          </div>
+          <h3 class="case-title">{{ case.title }}</h3>
+        </header>
+
+        <div class="case-body">
+          {% if case.problem %}
+          <div class="case-block">
+            <div class="case-block-label">Problem</div>
+            <p>{{ case.problem }}</p>
+          </div>
+          {% endif %}
+
+          {% if case.approach %}
+          <div class="case-block">
+            <div class="case-block-label">Approach</div>
+            <p>{{ case.approach }}</p>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if case.outcome %}
+        <div class="case-outcome">
+          <div class="case-outcome-headline">{{ case.outcome.headline }}</div>
+          {% if case.outcome.detail %}<div class="case-outcome-detail">{{ case.outcome.detail }}</div>{% endif %}
+        </div>
+        {% endif %}
+
+        {% if case.stack %}
+        <div class="case-stack">
+          <span class="case-stack-label">Stack</span>
+          {% for tech in case.stack %}<span class="case-stack-item">{{ tech }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if w.sectors %}
+<div class="strip">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="section-head">
+      <span class="section-eyebrow">Breadth</span>
+      <h2 class="section-title">Where we've shipped</h2>
+    </div>
+
+    <div class="sector-grid">
+      {% for s in w.sectors %}
+      <div class="sector">
+        <div class="sector-label">{{ s.label }}</div>
+        {% if s.note %}<div class="sector-note">{{ s.note }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if w.closing %}
+<div class="strip">
+  <div class="container pb-6 pb-md-10">
+    <div class="work-closing">
+      <p class="work-closing-text">{{ w.closing.text }}</p>
+      <a class="link-arrow" href="{{ w.closing.cta_url | relative_url }}">{{ w.closing.cta_label }} <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{{ content }}

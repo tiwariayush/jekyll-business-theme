@@ -1,0 +1,136 @@
+# Work page content.
+# Each case study below is derived from a real engagement but names are
+# redacted to a sector + geography + scale. Internal notes (// comments)
+# point to the real client so you can decide later which to unredact.
+
+intro:
+  eyebrow: "Selected work"
+  title: "Shipped systems, redacted names."
+  lede: >
+    Most clients are under NDA, so names stay private. The problems,
+    stacks, and outcomes below are real.
+
+metrics:
+  - value: "4"
+    label: "Industries shipped in"
+  - value: "100%"
+    label: "Deployed to production"
+  - value: "2023"
+    label: "JEI-certified since"
+
+cases:
+  # ---- Prose, Paris/NYC (Senior Backend Engineer, 2021–2023) ----
+  - sector: "D2C subscription"
+    geography: "Paris / NYC"
+    scale: "Post-Series C consumer brand"
+    stack: ["Django", "PostgreSQL", "Facebook CAPI", "GTM", "ReactJS", "GCP", "Stripe"]
+    title: "Rebuilding ad attribution and subscription payments after iOS 14"
+    problem: >
+      After iOS 14, the brand had lost roughly half of its Facebook ad
+      attribution. Acquisition cost was climbing with no diagnostic. On the
+      payments side, failed recurring charges on SEPA Direct Debit were
+      leaking subscribers every month.
+    approach: >
+      Implemented the Facebook Conversions API server-side, deduplicated
+      with the existing pixel, hashed PII at the edge, and added drift
+      monitoring on top. Re-architected the subscription model to support
+      multiple concurrent subscriptions per user. Re-implemented the Stripe
+      flow with smarter retries to recover failed Direct Debit payments.
+    outcome:
+      headline: "Attributed ad conversions roughly doubled"
+      detail: >
+        Direct Debit churn dropped, and the new subscription model
+        unblocked further product work.
+
+  # ---- Medical Facilities of America (two engagements merged) ----
+  - sector: "Healthcare operations"
+    geography: "United States"
+    scale: "Multi-state operator"
+    stack: ["Django", "FastAPI", "PostgreSQL", "Azure API Management", "ReactJS", "Docker", "GitHub Actions"]
+    title: "A centralized ops platform for a multi-state healthcare group"
+    problem: >
+      A US healthcare group with operations across many facilities had
+      grown its internal platform organically. Auth was fragmented across
+      third-party tools, the Django backend was slowing under load, and
+      the operations team had no unified view into either patient
+      operations or internal workflows.
+    approach: >
+      Built a centralized authorization layer on Azure API Management so
+      every third-party system sits behind a single secure gateway with
+      fine-grained role and access control. Led a team of 4 engineers on
+      the migration of the legacy Django backend to FastAPI, with
+      automated testing, structured logging, and production monitoring in
+      place from the start.
+    outcome:
+      headline: "Single auth gateway across all integrations; observable, faster APIs"
+      detail: >
+        A platform the operations team can extend without leaning on the
+        original authors.
+
+  # ---- Axione, Paris (two projects merged) ----
+  - sector: "Telecom infrastructure"
+    geography: "Paris"
+    scale: "Enterprise infra operator"
+    stack: ["FastAPI", "Django", "ReactJS", "PostgreSQL", "Camunda", "Prometheus", "Docker"]
+    title: "Modernizing an internal ops backend, Django to FastAPI"
+    problem: >
+      An internal service running CSV-triggered workflows through a
+      Camunda business-process orchestrator had become a bottleneck. The
+      backend was a Django monolith with very little observability, and a
+      separate legacy Django service depended on it with almost no
+      documentation.
+    approach: >
+      Tech-led the migration to FastAPI with a team of 3 engineers and a
+      Product Owner, including a redesign of the Camunda integration.
+      Exposed backend metrics over SNMP and Prometheus exporters so the
+      platform team could observe the service in production. Built a
+      React frontend for the internal users. In parallel, kept the
+      undocumented legacy Django service running as the sole developer
+      on it.
+    outcome:
+      headline: "Faster, observable backend with a real UI for internal users"
+      detail: >
+        The legacy Django service ran cleanly throughout the migration;
+        no critical business workflow was blocked.
+
+  # ---- Cartesian Trees R&D programme (ongoing, JEI) ----
+  - sector: "Applied AI research"
+    geography: "Paris (JEI)"
+    scale: "Ongoing R&D programme"
+    stack: ["Python", "SQL", "Bayesian inference", "Docker", "GitHub Actions"]
+    title: "Probabilistic inference engines for production decisions"
+    problem: >
+      Production decision systems often need to express uncertainty over
+      outcomes, which standard ML toolkits don't really support. This
+      shows up most in sequential and causal decisions in e-commerce and
+      finance.
+    approach: >
+      Bayesian probabilistic models for production datasets in e-commerce
+      and finance, with simulation pipelines wired into backend systems
+      so inference drives decisions instead of living in notebooks.
+      Workloads containerized with Docker and shipped through GitHub
+      Actions CI/CD.
+    outcome:
+      headline: "Inference under uncertainty, in production"
+      detail: >
+        Ongoing as a French-government-certified (JEI) R&D programme
+        since 2023.
+
+sectors:
+  - label: "D2C subscription · Paris/NYC"
+    note: "Tracking, payments, subscriptions"
+  - label: "Healthcare ops · USA"
+    note: "Auth gateway, Django to FastAPI"
+  - label: "Telecom infra · Paris"
+    note: "Workflow backend, observability"
+  - label: "E-commerce · EU"
+    note: "Bayesian inference, attribution"
+  - label: "Finance · EU"
+    note: "Probabilistic decision systems"
+  - label: "Applied AI R&D · Paris"
+    note: "JEI-certified research"
+
+closing:
+  text: "Want the longer version of any of these, or have a related problem?"
+  cta_label: "Let's talk"
+  cta_url: "contact"
